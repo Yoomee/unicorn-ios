@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "AboutViewController.h"
 
 @implementation ViewController
 
@@ -71,10 +72,12 @@
     });   
 }
 
+
 #pragma mark - View lifecycle
 
 - (void)viewDidLoad
-{   
+{ 
+    
     [self fetchVenues];
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
@@ -118,4 +121,9 @@
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
 
+- (IBAction)showAbout:(id)sender {
+    AboutViewController *a = [[AboutViewController alloc] init];
+	[a setModalTransitionStyle:UIModalTransitionStyleFlipHorizontal];
+	[self presentModalViewController:a animated:YES];
+}
 @end

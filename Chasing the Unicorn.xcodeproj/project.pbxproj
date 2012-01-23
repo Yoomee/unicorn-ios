@@ -17,6 +17,8 @@
 		5BAF7D1214CD8C75006D4638 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BAF7D1014CD8C75006D4638 /* ViewController.xib */; };
 		5BAF7D1A14CD8DA3006D4638 /* unicorn.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BAF7D1914CD8DA3006D4638 /* unicorn.png */; };
 		5BAF7D1D14CD9449006D4638 /* Venue.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BAF7D1C14CD9449006D4638 /* Venue.m */; };
+		5BAF7D2B14CDCAE5006D4638 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BAF7D2914CDCAE5006D4638 /* AboutViewController.m */; };
+		5BAF7D2C14CDCAE5006D4638 /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BAF7D2A14CDCAE5006D4638 /* AboutViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,9 @@
 		5BAF7D1914CD8DA3006D4638 /* unicorn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unicorn.png; sourceTree = "<group>"; };
 		5BAF7D1B14CD9449006D4638 /* Venue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Venue.h; sourceTree = "<group>"; };
 		5BAF7D1C14CD9449006D4638 /* Venue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Venue.m; sourceTree = "<group>"; };
+		5BAF7D2814CDCAE5006D4638 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
+		5BAF7D2914CDCAE5006D4638 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
+		5BAF7D2A14CDCAE5006D4638 /* AboutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +93,9 @@
 				5BAF7D0D14CD8C75006D4638 /* ViewController.h */,
 				5BAF7D0E14CD8C75006D4638 /* ViewController.m */,
 				5BAF7D1014CD8C75006D4638 /* ViewController.xib */,
+				5BAF7D2814CDCAE5006D4638 /* AboutViewController.h */,
+				5BAF7D2914CDCAE5006D4638 /* AboutViewController.m */,
+				5BAF7D2A14CDCAE5006D4638 /* AboutViewController.xib */,
 				5BAF7D0214CD8C75006D4638 /* Supporting Files */,
 				5BAF7D1E14CD9455006D4638 /* Models */,
 			);
@@ -176,6 +184,7 @@
 				5BAF7D0614CD8C75006D4638 /* InfoPlist.strings in Resources */,
 				5BAF7D1214CD8C75006D4638 /* ViewController.xib in Resources */,
 				5BAF7D1A14CD8DA3006D4638 /* unicorn.png in Resources */,
+				5BAF7D2C14CDCAE5006D4638 /* AboutViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -190,6 +199,7 @@
 				5BAF7D0C14CD8C75006D4638 /* AppDelegate.m in Sources */,
 				5BAF7D0F14CD8C75006D4638 /* ViewController.m in Sources */,
 				5BAF7D1D14CD9449006D4638 /* Venue.m in Sources */,
+				5BAF7D2B14CDCAE5006D4638 /* AboutViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

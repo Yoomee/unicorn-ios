@@ -22,6 +22,12 @@
     self.viewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
+    NSURL *testUrl = [NSURL URLWithString:@"foursquare://venues/4dd3be4f45dd98b61e7365d1"];
+    if ([application canOpenURL:testUrl]) {
+        NSLog(@"canOpenUrl!");
+    } else {
+        NSLog(@"no canOpenUrl");
+    }
     return YES;
 }
 

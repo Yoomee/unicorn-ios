@@ -16,5 +16,6 @@
 @property (unsafe_unretained, nonatomic) IBOutlet UILabel *otherVenue3NameLabel;
 @property (unsafe_unretained, nonatomic) IBOutlet UILabel *otherVenue4NameLabel;
 @property (nonatomic, strong) NSMutableArray *venues;
+- (IBAction)showAbout:(id)sender;
 
 @end
