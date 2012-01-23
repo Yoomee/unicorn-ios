@@ -9,5 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
+@property (unsafe_unretained, nonatomic) IBOutlet UILabel *currentVenueNameLabel;
+@property (unsafe_unretained, nonatomic) IBOutlet UILabel *otherVenue1NameLabel;
+@property (unsafe_unretained, nonatomic) IBOutlet UILabel *otherVenue2NameLabel;
+@property (unsafe_unretained, nonatomic) IBOutlet UILabel *otherVenue3NameLabel;
+@property (unsafe_unretained, nonatomic) IBOutlet UILabel *otherVenue4NameLabel;
 
 @end

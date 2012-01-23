@@ -9,6 +9,11 @@
 #import "ViewController.h"
 
 @implementation ViewController
+@synthesize currentVenueNameLabel;
+@synthesize otherVenue1NameLabel;
+@synthesize otherVenue2NameLabel;
+@synthesize otherVenue3NameLabel;
+@synthesize otherVenue4NameLabel;
 
 - (void)didReceiveMemoryWarning
 {
@@ -20,12 +25,23 @@
 
 - (void)viewDidLoad
 {
+    [currentVenueNameLabel setText:@"Ian's house"];
+    [otherVenue1NameLabel setText:@"Matt's house"];
+    [otherVenue2NameLabel setText:@"Si's house"];
+    [otherVenue3NameLabel setText:@"Rich's house"];
+    [otherVenue4NameLabel setText:@"Andy's house"];
+
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
 - (void)viewDidUnload
 {
+    [self setCurrentVenueNameLabel:nil];
+    [self setOtherVenue1NameLabel:nil];
+    [self setOtherVenue2NameLabel:nil];
+    [self setOtherVenue3NameLabel:nil];
+    [self setOtherVenue4NameLabel:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
