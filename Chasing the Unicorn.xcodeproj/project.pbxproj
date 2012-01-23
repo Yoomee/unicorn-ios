@@ -16,6 +16,7 @@
 		5BAF7D0F14CD8C75006D4638 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BAF7D0E14CD8C75006D4638 /* ViewController.m */; };
 		5BAF7D1214CD8C75006D4638 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BAF7D1014CD8C75006D4638 /* ViewController.xib */; };
 		5BAF7D1A14CD8DA3006D4638 /* unicorn.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BAF7D1914CD8DA3006D4638 /* unicorn.png */; };
+		5BAF7D1D14CD9449006D4638 /* Venue.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BAF7D1C14CD9449006D4638 /* Venue.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,8 @@
 		5BAF7D0E14CD8C75006D4638 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		5BAF7D1114CD8C75006D4638 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
 		5BAF7D1914CD8DA3006D4638 /* unicorn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unicorn.png; sourceTree = "<group>"; };
+		5BAF7D1B14CD9449006D4638 /* Venue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Venue.h; sourceTree = "<group>"; };
+		5BAF7D1C14CD9449006D4638 /* Venue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Venue.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +89,7 @@
 				5BAF7D0E14CD8C75006D4638 /* ViewController.m */,
 				5BAF7D1014CD8C75006D4638 /* ViewController.xib */,
 				5BAF7D0214CD8C75006D4638 /* Supporting Files */,
+				5BAF7D1E14CD9455006D4638 /* Models */,
 			);
 			path = "Chasing the Unicorn";
 			sourceTree = "<group>";
@@ -107,6 +111,15 @@
 				5BAF7D1914CD8DA3006D4638 /* unicorn.png */,
 			);
 			name = Images;
+			sourceTree = "<group>";
+		};
+		5BAF7D1E14CD9455006D4638 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5BAF7D1B14CD9449006D4638 /* Venue.h */,
+				5BAF7D1C14CD9449006D4638 /* Venue.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,6 +189,7 @@
 				5BAF7D0814CD8C75006D4638 /* main.m in Sources */,
 				5BAF7D0C14CD8C75006D4638 /* AppDelegate.m in Sources */,
 				5BAF7D0F14CD8C75006D4638 /* ViewController.m in Sources */,
+				5BAF7D1D14CD9449006D4638 /* Venue.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

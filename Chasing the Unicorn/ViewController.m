@@ -9,6 +9,8 @@
 #import "ViewController.h"
 
 @implementation ViewController
+
+@synthesize venues;
 @synthesize currentVenueNameLabel;
 @synthesize otherVenue1NameLabel;
 @synthesize otherVenue2NameLabel;
@@ -21,16 +23,59 @@
     // Release any cached data, images, etc that aren't in use.
 }
 
+#pragma mark - Venue methods
+- (Venue *)currentVenue
+{
+    if ([venues count] > 0) {
+        return [venues objectAtIndex:0];
+    } else {
+        return nil;
+    }
+}
+
+- (NSArray *)otherVenueNameLabels
+{
+    return [[NSArray alloc] initWithObjects:otherVenue1NameLabel, otherVenue2NameLabel,otherVenue3NameLabel, otherVenue4NameLabel, nil];
+}
+
+-(void)updateVenueLabels{
+    [currentVenueNameLabel setText:self.currentVenue.name];
+    for (int idx = 0; idx < 4; idx++) {
+        [[self.otherVenueNameLabels objectAtIndex:idx] setText:[[self.venues objectAtIndex:(idx + 1)] name]];
+    }
+}
+
+
+#pragma mark - Data
+
+-(void) fetchVenues{
+    NSURL *venuesUrl = [NSURL URLWithString:@"http://dl.dropbox.com/u/1641228/unicorn/venues.json"];
+
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
+        NSData *venuesData = [NSData dataWithContentsOfURL:venuesUrl];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            
+            NSError *jsonParsingError = nil;
+			NSDictionary *venuesDictionary = [NSJSONSerialization JSONObjectWithData:venuesData options:0 error:&jsonParsingError];
+            
+            NSArray* latestVenues = [venuesDictionary objectForKey:@"venues"];
+            self.venues = [[NSMutableArray alloc] init];            
+            
+            [latestVenues enumerateObjectsUsingBlock:^(NSDictionary *venueDict, NSUInteger idx, BOOL *stop) {
+                Venue *venue = [Venue initWithDictionary:venueDict];
+                [self.venues addObject:venue];
+            }];
+            [self updateVenueLabels];
+
+        });        
+    });   
+}
+
 #pragma mark - View lifecycle
 
 - (void)viewDidLoad
-{
-    [currentVenueNameLabel setText:@"Ian's house"];
-    [otherVenue1NameLabel setText:@"Matt's house"];
-    [otherVenue2NameLabel setText:@"Si's house"];
-    [otherVenue3NameLabel setText:@"Rich's house"];
-    [otherVenue4NameLabel setText:@"Andy's house"];
-
+{   
+    [self fetchVenues];
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }
