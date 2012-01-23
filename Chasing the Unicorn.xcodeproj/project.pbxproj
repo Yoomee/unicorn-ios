@@ -1,0 +1,282 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5BAF7CFC14CD8C75006D4638 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BAF7CFB14CD8C75006D4638 /* UIKit.framework */; };
+		5BAF7CFE14CD8C75006D4638 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BAF7CFD14CD8C75006D4638 /* Foundation.framework */; };
+		5BAF7D0014CD8C75006D4638 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BAF7CFF14CD8C75006D4638 /* CoreGraphics.framework */; };
+		5BAF7D0614CD8C75006D4638 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5BAF7D0414CD8C75006D4638 /* InfoPlist.strings */; };
+		5BAF7D0814CD8C75006D4638 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BAF7D0714CD8C75006D4638 /* main.m */; };
+		5BAF7D0C14CD8C75006D4638 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BAF7D0B14CD8C75006D4638 /* AppDelegate.m */; };
+		5BAF7D0F14CD8C75006D4638 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BAF7D0E14CD8C75006D4638 /* ViewController.m */; };
+		5BAF7D1214CD8C75006D4638 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BAF7D1014CD8C75006D4638 /* ViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5BAF7CF714CD8C75006D4638 /* Chasing the Unicorn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Chasing the Unicorn.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BAF7CFB14CD8C75006D4638 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		5BAF7CFD14CD8C75006D4638 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		5BAF7CFF14CD8C75006D4638 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		5BAF7D0314CD8C75006D4638 /* Chasing the Unicorn-Info.plist */ = {isa = PBXFileReference; path = "Chasing the Unicorn-Info.plist"; sourceTree = "<group>"; };
+		5BAF7D0514CD8C75006D4638 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5BAF7D0714CD8C75006D4638 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5BAF7D0914CD8C75006D4638 /* Chasing the Unicorn-Prefix.pch */ = {isa = PBXFileReference; path = "Chasing the Unicorn-Prefix.pch"; sourceTree = "<group>"; };
+		5BAF7D0A14CD8C75006D4638 /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		5BAF7D0B14CD8C75006D4638 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		5BAF7D0D14CD8C75006D4638 /* ViewController.h */ = {isa = PBXFileReference; path = ViewController.h; sourceTree = "<group>"; };
+		5BAF7D0E14CD8C75006D4638 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		5BAF7D1114CD8C75006D4638 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5BAF7CF414CD8C75006D4638 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BAF7CFC14CD8C75006D4638 /* UIKit.framework in Frameworks */,
+				5BAF7CFE14CD8C75006D4638 /* Foundation.framework in Frameworks */,
+				5BAF7D0014CD8C75006D4638 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5BAF7CEC14CD8C75006D4638 = {
+			isa = PBXGroup;
+			children = (
+				5BAF7D0114CD8C75006D4638 /* Chasing the Unicorn */,
+				5BAF7CFA14CD8C75006D4638 /* Frameworks */,
+				5BAF7CF814CD8C75006D4638 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5BAF7CF814CD8C75006D4638 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5BAF7CF714CD8C75006D4638 /* Chasing the Unicorn.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5BAF7CFA14CD8C75006D4638 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5BAF7CFB14CD8C75006D4638 /* UIKit.framework */,
+				5BAF7CFD14CD8C75006D4638 /* Foundation.framework */,
+				5BAF7CFF14CD8C75006D4638 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5BAF7D0114CD8C75006D4638 /* Chasing the Unicorn */ = {
+			isa = PBXGroup;
+			children = (
+				5BAF7D0A14CD8C75006D4638 /* AppDelegate.h */,
+				5BAF7D0B14CD8C75006D4638 /* AppDelegate.m */,
+				5BAF7D0D14CD8C75006D4638 /* ViewController.h */,
+				5BAF7D0E14CD8C75006D4638 /* ViewController.m */,
+				5BAF7D1014CD8C75006D4638 /* ViewController.xib */,
+				5BAF7D0214CD8C75006D4638 /* Supporting Files */,
+			);
+			path = "Chasing the Unicorn";
+			sourceTree = "<group>";
+		};
+		5BAF7D0214CD8C75006D4638 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5BAF7D0314CD8C75006D4638 /* Chasing the Unicorn-Info.plist */,
+				5BAF7D0414CD8C75006D4638 /* InfoPlist.strings */,
+				5BAF7D0714CD8C75006D4638 /* main.m */,
+				5BAF7D0914CD8C75006D4638 /* Chasing the Unicorn-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5BAF7CF614CD8C75006D4638 /* Chasing the Unicorn */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5BAF7D1514CD8C75006D4638 /* Build configuration list for PBXNativeTarget "Chasing the Unicorn" */;
+			buildPhases = (
+				5BAF7CF314CD8C75006D4638 /* Sources */,
+				5BAF7CF414CD8C75006D4638 /* Frameworks */,
+				5BAF7CF514CD8C75006D4638 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Chasing the Unicorn";
+			productName = "Chasing the Unicorn";
+			productReference = 5BAF7CF714CD8C75006D4638 /* Chasing the Unicorn.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5BAF7CEE14CD8C75006D4638 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = Yoomee;
+			};
+			buildConfigurationList = 5BAF7CF114CD8C75006D4638 /* Build configuration list for PBXProject "Chasing the Unicorn" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 5BAF7CEC14CD8C75006D4638;
+			productRefGroup = 5BAF7CF814CD8C75006D4638 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5BAF7CF614CD8C75006D4638 /* Chasing the Unicorn */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5BAF7CF514CD8C75006D4638 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BAF7D0614CD8C75006D4638 /* InfoPlist.strings in Resources */,
+				5BAF7D1214CD8C75006D4638 /* ViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5BAF7CF314CD8C75006D4638 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BAF7D0814CD8C75006D4638 /* main.m in Sources */,
+				5BAF7D0C14CD8C75006D4638 /* AppDelegate.m in Sources */,
+				5BAF7D0F14CD8C75006D4638 /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		5BAF7D0414CD8C75006D4638 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5BAF7D0514CD8C75006D4638 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		5BAF7D1014CD8C75006D4638 /* ViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5BAF7D1114CD8C75006D4638 /* en */,
+			);
+			name = ViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5BAF7D1314CD8C75006D4638 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		5BAF7D1414CD8C75006D4638 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5BAF7D1614CD8C75006D4638 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Chasing the Unicorn/Chasing the Unicorn-Prefix.pch";
+				INFOPLIST_FILE = "Chasing the Unicorn/Chasing the Unicorn-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		5BAF7D1714CD8C75006D4638 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Chasing the Unicorn/Chasing the Unicorn-Prefix.pch";
+				INFOPLIST_FILE = "Chasing the Unicorn/Chasing the Unicorn-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5BAF7CF114CD8C75006D4638 /* Build configuration list for PBXProject "Chasing the Unicorn" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5BAF7D1314CD8C75006D4638 /* Debug */,
+				5BAF7D1414CD8C75006D4638 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5BAF7D1514CD8C75006D4638 /* Build configuration list for PBXNativeTarget "Chasing the Unicorn" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5BAF7D1614CD8C75006D4638 /* Debug */,
+				5BAF7D1714CD8C75006D4638 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5BAF7CEE14CD8C75006D4638 /* Project object */;
+}
