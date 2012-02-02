@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B10337014DADEAE00381F14 /* Refresh.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B10336F14DADEAE00381F14 /* Refresh.png */; };
+		5B3346F914DA8AC200A3FCE1 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B3346F714DA8AC200A3FCE1 /* Default.png */; };
+		5B33473714DA8F2000A3FCE1 /* SplashScreenController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B33473514DA8F2000A3FCE1 /* SplashScreenController.m */; };
+		5B33473814DA8F2000A3FCE1 /* SplashScreenController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B33473614DA8F2000A3FCE1 /* SplashScreenController.xib */; };
+		5B33474114DAABEC00A3FCE1 /* VenueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B33473F14DAABEB00A3FCE1 /* VenueViewController.m */; };
+		5B33474214DAABEC00A3FCE1 /* VenueViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B33474014DAABEC00A3FCE1 /* VenueViewController.xib */; };
+		5B33474614DAB0AB00A3FCE1 /* ViewControllerBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B33474514DAB0AB00A3FCE1 /* ViewControllerBG.png */; };
+		5B33474814DAB46A00A3FCE1 /* app_icon_57.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B33474714DAB46900A3FCE1 /* app_icon_57.png */; };
 		5BAF7CFC14CD8C75006D4638 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BAF7CFB14CD8C75006D4638 /* UIKit.framework */; };
 		5BAF7CFE14CD8C75006D4638 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BAF7CFD14CD8C75006D4638 /* Foundation.framework */; };
 		5BAF7D0014CD8C75006D4638 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BAF7CFF14CD8C75006D4638 /* CoreGraphics.framework */; };
@@ -15,27 +23,35 @@
 		5BAF7D0C14CD8C75006D4638 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BAF7D0B14CD8C75006D4638 /* AppDelegate.m */; };
 		5BAF7D0F14CD8C75006D4638 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BAF7D0E14CD8C75006D4638 /* ViewController.m */; };
 		5BAF7D1214CD8C75006D4638 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BAF7D1014CD8C75006D4638 /* ViewController.xib */; };
-		5BAF7D1A14CD8DA3006D4638 /* unicorn.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BAF7D1914CD8DA3006D4638 /* unicorn.png */; };
 		5BAF7D1D14CD9449006D4638 /* Venue.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BAF7D1C14CD9449006D4638 /* Venue.m */; };
 		5BAF7D2B14CDCAE5006D4638 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BAF7D2914CDCAE5006D4638 /* AboutViewController.m */; };
 		5BAF7D2C14CDCAE5006D4638 /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BAF7D2A14CDCAE5006D4638 /* AboutViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5BAF7CF714CD8C75006D4638 /* Chasing the Unicorn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Chasing the Unicorn.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B10336F14DADEAE00381F14 /* Refresh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Refresh.png; sourceTree = "<group>"; };
+		5B3346F714DA8AC200A3FCE1 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		5B33473414DA8F2000A3FCE1 /* SplashScreenController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplashScreenController.h; sourceTree = "<group>"; };
+		5B33473514DA8F2000A3FCE1 /* SplashScreenController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplashScreenController.m; sourceTree = "<group>"; };
+		5B33473614DA8F2000A3FCE1 /* SplashScreenController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SplashScreenController.xib; sourceTree = "<group>"; };
+		5B33473E14DAABEB00A3FCE1 /* VenueViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VenueViewController.h; sourceTree = "<group>"; };
+		5B33473F14DAABEB00A3FCE1 /* VenueViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VenueViewController.m; sourceTree = "<group>"; };
+		5B33474014DAABEC00A3FCE1 /* VenueViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VenueViewController.xib; sourceTree = "<group>"; };
+		5B33474514DAB0AB00A3FCE1 /* ViewControllerBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ViewControllerBG.png; sourceTree = "<group>"; };
+		5B33474714DAB46900A3FCE1 /* app_icon_57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = app_icon_57.png; path = ../app_icon_57.png; sourceTree = "<group>"; };
+		5BAF7CF714CD8C75006D4638 /* Chase the Unicorn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Chase the Unicorn.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BAF7CFB14CD8C75006D4638 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		5BAF7CFD14CD8C75006D4638 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5BAF7CFF14CD8C75006D4638 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		5BAF7D0314CD8C75006D4638 /* Chasing the Unicorn-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Chasing the Unicorn-Info.plist"; sourceTree = "<group>"; };
+		5BAF7D0314CD8C75006D4638 /* Chase the Unicorn-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Chase the Unicorn-Info.plist"; sourceTree = "<group>"; };
 		5BAF7D0514CD8C75006D4638 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5BAF7D0714CD8C75006D4638 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		5BAF7D0914CD8C75006D4638 /* Chasing the Unicorn-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Chasing the Unicorn-Prefix.pch"; sourceTree = "<group>"; };
+		5BAF7D0914CD8C75006D4638 /* Chase the Unicorn-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Chase the Unicorn-Prefix.pch"; sourceTree = "<group>"; };
 		5BAF7D0A14CD8C75006D4638 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5BAF7D0B14CD8C75006D4638 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		5BAF7D0D14CD8C75006D4638 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		5BAF7D0E14CD8C75006D4638 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		5BAF7D1114CD8C75006D4638 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
-		5BAF7D1914CD8DA3006D4638 /* unicorn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unicorn.png; sourceTree = "<group>"; };
 		5BAF7D1B14CD9449006D4638 /* Venue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Venue.h; sourceTree = "<group>"; };
 		5BAF7D1C14CD9449006D4638 /* Venue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Venue.m; sourceTree = "<group>"; };
 		5BAF7D2814CDCAE5006D4638 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
@@ -57,6 +73,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5B33474314DAAE7D00A3FCE1 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5BAF7D0D14CD8C75006D4638 /* ViewController.h */,
+				5BAF7D0E14CD8C75006D4638 /* ViewController.m */,
+				5B33473E14DAABEB00A3FCE1 /* VenueViewController.h */,
+				5B33473F14DAABEB00A3FCE1 /* VenueViewController.m */,
+				5B33473414DA8F2000A3FCE1 /* SplashScreenController.h */,
+				5B33473514DA8F2000A3FCE1 /* SplashScreenController.m */,
+				5BAF7D2814CDCAE5006D4638 /* AboutViewController.h */,
+				5BAF7D2914CDCAE5006D4638 /* AboutViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		5B33474414DAAE9D00A3FCE1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5BAF7D2A14CDCAE5006D4638 /* AboutViewController.xib */,
+				5B33473614DA8F2000A3FCE1 /* SplashScreenController.xib */,
+				5BAF7D1014CD8C75006D4638 /* ViewController.xib */,
+				5B33474014DAABEC00A3FCE1 /* VenueViewController.xib */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		5BAF7CEC14CD8C75006D4638 = {
 			isa = PBXGroup;
 			children = (
@@ -69,7 +111,7 @@
 		5BAF7CF814CD8C75006D4638 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5BAF7CF714CD8C75006D4638 /* Chasing the Unicorn.app */,
+				5BAF7CF714CD8C75006D4638 /* Chase the Unicorn.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -87,17 +129,13 @@
 		5BAF7D0114CD8C75006D4638 /* Chasing the Unicorn */ = {
 			isa = PBXGroup;
 			children = (
-				5BAF7D1814CD8D94006D4638 /* Images */,
 				5BAF7D0A14CD8C75006D4638 /* AppDelegate.h */,
 				5BAF7D0B14CD8C75006D4638 /* AppDelegate.m */,
-				5BAF7D0D14CD8C75006D4638 /* ViewController.h */,
-				5BAF7D0E14CD8C75006D4638 /* ViewController.m */,
-				5BAF7D1014CD8C75006D4638 /* ViewController.xib */,
-				5BAF7D2814CDCAE5006D4638 /* AboutViewController.h */,
-				5BAF7D2914CDCAE5006D4638 /* AboutViewController.m */,
-				5BAF7D2A14CDCAE5006D4638 /* AboutViewController.xib */,
-				5BAF7D0214CD8C75006D4638 /* Supporting Files */,
 				5BAF7D1E14CD9455006D4638 /* Models */,
+				5B33474314DAAE7D00A3FCE1 /* Controllers */,
+				5B33474414DAAE9D00A3FCE1 /* Views */,
+				5BAF7D1814CD8D94006D4638 /* Images */,
+				5BAF7D0214CD8C75006D4638 /* Supporting Files */,
 			);
 			path = "Chasing the Unicorn";
 			sourceTree = "<group>";
@@ -105,10 +143,10 @@
 		5BAF7D0214CD8C75006D4638 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				5BAF7D0314CD8C75006D4638 /* Chasing the Unicorn-Info.plist */,
+				5BAF7D0314CD8C75006D4638 /* Chase the Unicorn-Info.plist */,
 				5BAF7D0414CD8C75006D4638 /* InfoPlist.strings */,
 				5BAF7D0714CD8C75006D4638 /* main.m */,
-				5BAF7D0914CD8C75006D4638 /* Chasing the Unicorn-Prefix.pch */,
+				5BAF7D0914CD8C75006D4638 /* Chase the Unicorn-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -116,7 +154,10 @@
 		5BAF7D1814CD8D94006D4638 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				5BAF7D1914CD8DA3006D4638 /* unicorn.png */,
+				5B10336F14DADEAE00381F14 /* Refresh.png */,
+				5B33474714DAB46900A3FCE1 /* app_icon_57.png */,
+				5B33474514DAB0AB00A3FCE1 /* ViewControllerBG.png */,
+				5B3346F714DA8AC200A3FCE1 /* Default.png */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -133,9 +174,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5BAF7CF614CD8C75006D4638 /* Chasing the Unicorn */ = {
+		5BAF7CF614CD8C75006D4638 /* Chase the Unicorn */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5BAF7D1514CD8C75006D4638 /* Build configuration list for PBXNativeTarget "Chasing the Unicorn" */;
+			buildConfigurationList = 5BAF7D1514CD8C75006D4638 /* Build configuration list for PBXNativeTarget "Chase the Unicorn" */;
 			buildPhases = (
 				5BAF7CF314CD8C75006D4638 /* Sources */,
 				5BAF7CF414CD8C75006D4638 /* Frameworks */,
@@ -145,9 +186,9 @@
 			);
 			dependencies = (
 			);
-			name = "Chasing the Unicorn";
+			name = "Chase the Unicorn";
 			productName = "Chasing the Unicorn";
-			productReference = 5BAF7CF714CD8C75006D4638 /* Chasing the Unicorn.app */;
+			productReference = 5BAF7CF714CD8C75006D4638 /* Chase the Unicorn.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -159,7 +200,7 @@
 				LastUpgradeCheck = 0420;
 				ORGANIZATIONNAME = Yoomee;
 			};
-			buildConfigurationList = 5BAF7CF114CD8C75006D4638 /* Build configuration list for PBXProject "Chasing the Unicorn" */;
+			buildConfigurationList = 5BAF7CF114CD8C75006D4638 /* Build configuration list for PBXProject "Chase the Unicorn" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -171,7 +212,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5BAF7CF614CD8C75006D4638 /* Chasing the Unicorn */,
+				5BAF7CF614CD8C75006D4638 /* Chase the Unicorn */,
 			);
 		};
 /* End PBXProject section */
@@ -183,8 +224,13 @@
 			files = (
 				5BAF7D0614CD8C75006D4638 /* InfoPlist.strings in Resources */,
 				5BAF7D1214CD8C75006D4638 /* ViewController.xib in Resources */,
-				5BAF7D1A14CD8DA3006D4638 /* unicorn.png in Resources */,
 				5BAF7D2C14CDCAE5006D4638 /* AboutViewController.xib in Resources */,
+				5B3346F914DA8AC200A3FCE1 /* Default.png in Resources */,
+				5B33473814DA8F2000A3FCE1 /* SplashScreenController.xib in Resources */,
+				5B33474214DAABEC00A3FCE1 /* VenueViewController.xib in Resources */,
+				5B33474614DAB0AB00A3FCE1 /* ViewControllerBG.png in Resources */,
+				5B33474814DAB46A00A3FCE1 /* app_icon_57.png in Resources */,
+				5B10337014DADEAE00381F14 /* Refresh.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,6 +246,8 @@
 				5BAF7D0F14CD8C75006D4638 /* ViewController.m in Sources */,
 				5BAF7D1D14CD9449006D4638 /* Venue.m in Sources */,
 				5BAF7D2B14CDCAE5006D4638 /* AboutViewController.m in Sources */,
+				5B33473714DA8F2000A3FCE1 /* SplashScreenController.m in Sources */,
+				5B33474114DAABEC00A3FCE1 /* VenueViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,10 +322,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Chasing the Unicorn/Chasing the Unicorn-Prefix.pch";
-				INFOPLIST_FILE = "Chasing the Unicorn/Chasing the Unicorn-Info.plist";
+				GCC_PREFIX_HEADER = "Chasing the Unicorn/Chase the Unicorn-Prefix.pch";
+				INFOPLIST_FILE = "Chasing the Unicorn/Chase the Unicorn-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Chase the Unicorn";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -286,10 +334,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Chasing the Unicorn/Chasing the Unicorn-Prefix.pch";
-				INFOPLIST_FILE = "Chasing the Unicorn/Chasing the Unicorn-Info.plist";
+				GCC_PREFIX_HEADER = "Chasing the Unicorn/Chase the Unicorn-Prefix.pch";
+				INFOPLIST_FILE = "Chasing the Unicorn/Chase the Unicorn-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Chase the Unicorn";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -297,7 +345,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5BAF7CF114CD8C75006D4638 /* Build configuration list for PBXProject "Chasing the Unicorn" */ = {
+		5BAF7CF114CD8C75006D4638 /* Build configuration list for PBXProject "Chase the Unicorn" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5BAF7D1314CD8C75006D4638 /* Debug */,
@@ -306,13 +354,14 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5BAF7D1514CD8C75006D4638 /* Build configuration list for PBXNativeTarget "Chasing the Unicorn" */ = {
+		5BAF7D1514CD8C75006D4638 /* Build configuration list for PBXNativeTarget "Chase the Unicorn" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5BAF7D1614CD8C75006D4638 /* Debug */,
 				5BAF7D1714CD8C75006D4638 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

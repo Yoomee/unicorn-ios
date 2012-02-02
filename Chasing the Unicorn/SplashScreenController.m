@@ -1,14 +1,14 @@
 //
-//  AboutViewController.m
-//  Chasing the Unicorn
+//  SplashScreenController.m
+//  Chase the Unicorn
 //
-//  Created by Matthew Atkins on 23/01/2012.
+//  Created by Matthew Atkins on 02/02/2012.
 //  Copyright (c) 2012 Yoomee. All rights reserved.
 //
 
-#import "AboutViewController.h"
+#import "SplashScreenController.h"
 
-@implementation AboutViewController
+@implementation SplashScreenController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -48,7 +48,4 @@
     return UIInterfaceOrientationIsPortrait(interfaceOrientation);
 }
 
-- (IBAction)hideAbout:(id)sender {
-    [self dismissModalViewControllerAnimated:YES];
-}
 @end

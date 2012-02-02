@@ -8,15 +8,22 @@
 
 #import "ViewController.h"
 #import "AboutViewController.h"
+#import "SplashScreenController.h"
+#import "VenueViewController.h"
 
 @implementation ViewController
 
 @synthesize venues;
-@synthesize currentVenueNameLabel;
-@synthesize otherVenue1NameLabel;
-@synthesize otherVenue2NameLabel;
-@synthesize otherVenue3NameLabel;
-@synthesize otherVenue4NameLabel;
+@synthesize currentVenueButton;
+@synthesize otherVenue1Button;
+@synthesize otherVenue2Button;
+@synthesize otherVenue3Button;
+@synthesize otherVenue4Button;
+@synthesize currentVenueArrowButton;
+@synthesize refreshButton;
+@synthesize activityIndicator;
+
+@synthesize venueViewController = _venueViewController;
 
 - (void)didReceiveMemoryWarning
 {
@@ -34,15 +41,39 @@
     }
 }
 
-- (NSArray *)otherVenueNameLabels
+- (NSArray *)otherVenueButtons
 {
-    return [[NSArray alloc] initWithObjects:otherVenue1NameLabel, otherVenue2NameLabel,otherVenue3NameLabel, otherVenue4NameLabel, nil];
+    return [[NSArray alloc] initWithObjects:otherVenue1Button, otherVenue2Button,otherVenue3Button, otherVenue4Button, nil];
 }
 
--(void)updateVenueLabels{
-    [currentVenueNameLabel setText:self.currentVenue.name];
+-(void)configureView{
+    [currentVenueButton setTitle:self.currentVenue.name forState:UIControlStateNormal];
+    [currentVenueButton setEnabled:YES];
+    [currentVenueArrowButton setEnabled:YES];
     for (int idx = 0; idx < 4; idx++) {
-        [[self.otherVenueNameLabels objectAtIndex:idx] setText:[[self.venues objectAtIndex:(idx + 1)] name]];
+        [[self.otherVenueButtons objectAtIndex:idx] setTitle:[[self.venues objectAtIndex:(idx + 1)] name] forState:UIControlStateNormal];
+        [[self.otherVenueButtons objectAtIndex:idx] setEnabled:YES];
+    }
+}
+
+-(void)clearView{
+    [currentVenueButton setTitle:@"" forState:UIControlStateNormal];
+    [currentVenueButton setEnabled:NO];
+    [currentVenueArrowButton setEnabled:NO];
+    for (int idx = 0; idx < 4; idx++) {
+        [[self.otherVenueButtons objectAtIndex:idx] setTitle:@"" forState:UIControlStateNormal];
+        [[self.otherVenueButtons objectAtIndex:idx] setEnabled:NO];
+    }
+}
+
+
+-(void)disableView{
+    [currentVenueButton setTitle:@"?????" forState:UIControlStateNormal];
+    [currentVenueButton setEnabled:NO];
+    [currentVenueArrowButton setEnabled:NO];
+    for (int idx = 0; idx < 4; idx++) {
+        [[self.otherVenueButtons objectAtIndex:idx] setTitle:@"?????" forState:UIControlStateNormal];
+        [[self.otherVenueButtons objectAtIndex:idx] setEnabled:NO];
     }
 }
 
@@ -51,45 +82,60 @@
 
 -(void) fetchVenues{
     NSURL *venuesUrl = [NSURL URLWithString:@"http://dl.dropbox.com/u/1641228/unicorn/venues.json"];
-
+    UIApplication* app = [UIApplication sharedApplication];
+    app.networkActivityIndicatorVisible = YES;
+    [self.refreshButton setHidden:YES];
+    [self.activityIndicator setHidden:NO];
+    [self.activityIndicator startAnimating];
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
         NSData *venuesData = [NSData dataWithContentsOfURL:venuesUrl];
+        app.networkActivityIndicatorVisible = NO;
         dispatch_async(dispatch_get_main_queue(), ^{
-            
-            NSError *jsonParsingError = nil;
-			NSDictionary *venuesDictionary = [NSJSONSerialization JSONObjectWithData:venuesData options:0 error:&jsonParsingError];
-            
-            NSArray* latestVenues = [venuesDictionary objectForKey:@"venues"];
-            self.venues = [[NSMutableArray alloc] init];            
-            
-            [latestVenues enumerateObjectsUsingBlock:^(NSDictionary *venueDict, NSUInteger idx, BOOL *stop) {
-                Venue *venue = [Venue initWithDictionary:venueDict];
-                [self.venues addObject:venue];
-            }];
-            [self updateVenueLabels];
-
-        });        
+            if (venuesData != nil){
+                NSError *jsonParsingError = nil;
+                NSDictionary *venuesDictionary = [NSJSONSerialization JSONObjectWithData:venuesData options:0 error:&jsonParsingError];
+                
+                NSArray* latestVenues = [venuesDictionary objectForKey:@"venues"];
+                self.venues = [[NSMutableArray alloc] init];            
+                
+                [latestVenues enumerateObjectsUsingBlock:^(NSDictionary *venueDict, NSUInteger idx, BOOL *stop) {
+                    Venue *venue = [Venue initWithDictionary:venueDict];
+                    [self.venues addObject:venue];
+                }];
+                [self configureView];
+            } else {
+                UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Unicorn Not Found" message:@"Check you're connected to Internet and try again later.\nHe's always on the move." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                [alertView show];
+                [self disableView];
+            }
+            [self.activityIndicator stopAnimating];
+            [self.activityIndicator setHidden:YES];
+            [self.refreshButton setHidden:NO];
+        });
+        
     });   
 }
+
 
 
 #pragma mark - View lifecycle
 
 - (void)viewDidLoad
 { 
-    
-    [self fetchVenues];
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
 }
 
 - (void)viewDidUnload
 {
-    [self setCurrentVenueNameLabel:nil];
-    [self setOtherVenue1NameLabel:nil];
-    [self setOtherVenue2NameLabel:nil];
-    [self setOtherVenue3NameLabel:nil];
-    [self setOtherVenue4NameLabel:nil];
+    [self setCurrentVenueButton:nil];
+    [self setOtherVenue1Button:nil];
+    [self setOtherVenue2Button:nil];
+    [self setOtherVenue3Button:nil];
+    [self setOtherVenue4Button:nil];
+    [self setVenueViewController:nil];
+    [self setCurrentVenueArrowButton:nil];
+    [self setActivityIndicator:nil];
+    [self setRefreshButton:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -98,6 +144,8 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    [self clearView];
+    [self fetchVenues];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -118,7 +166,7 @@
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     // Return YES for supported orientations
-    return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
+    return UIInterfaceOrientationIsPortrait(interfaceOrientation);
 }
 
 - (IBAction)showAbout:(id)sender {
@@ -126,4 +174,20 @@
 	[a setModalTransitionStyle:UIModalTransitionStyleFlipHorizontal];
 	[self presentModalViewController:a animated:YES];
 }
+
+- (IBAction)showVenue:(id)sender {
+    if(_venueViewController == nil){
+        VenueViewController *aVenueViewController = [[VenueViewController alloc] init];
+        [aVenueViewController setModalTransitionStyle:UIModalTransitionStylePartialCurl];
+        _venueViewController = aVenueViewController;
+    }
+    
+    [self.venueViewController setVenue:[self.venues objectAtIndex:[sender tag]]];
+	[self presentModalViewController:self.venueViewController animated:YES];
+}
+
+- (IBAction)refreshVenues:(id)sender {
+    [self fetchVenues];
+}
+
 @end

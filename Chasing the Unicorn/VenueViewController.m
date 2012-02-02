@@ -1,14 +1,18 @@
 //
-//  AboutViewController.m
-//  Chasing the Unicorn
+//  VenueViewController.m
+//  Chase the Unicorn
 //
-//  Created by Matthew Atkins on 23/01/2012.
+//  Created by Matthew Atkins on 02/02/2012.
 //  Copyright (c) 2012 Yoomee. All rights reserved.
 //
 
-#import "AboutViewController.h"
+#import "VenueViewController.h"
+#import "Venue.h"
 
-@implementation AboutViewController
+@implementation VenueViewController
+@synthesize venueNameLabel;
+@synthesize venueAddressLabel;
+@synthesize venue = _venue;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -32,11 +36,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self configureView];
     // Do any additional setup after loading the view from its nib.
 }
 
 - (void)viewDidUnload
 {
+    [self setVenueNameLabel:nil];
+    [self setVenueAddressLabel:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -48,7 +55,23 @@
     return UIInterfaceOrientationIsPortrait(interfaceOrientation);
 }
 
-- (IBAction)hideAbout:(id)sender {
+- (IBAction)hideVenueView:(id)sender {
     [self dismissModalViewControllerAnimated:YES];
+}
+
+-(void)configureView{
+    if (self.venue != nil) {
+        [self.venueAddressLabel setText:self.venue.address];
+        [self.venueNameLabel setText:self.venue.name];
+
+    }
+}
+
+- (void)setVenue:(Venue *)newVenue {
+	if (_venue != newVenue) {
+		_venue = newVenue;
+        // Update the view.
+        [self configureView];
+	}    
 }
 @end
