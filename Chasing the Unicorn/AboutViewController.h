@@ -10,5 +10,6 @@
 
 @interface AboutViewController : UIViewController
 - (IBAction)hideAbout:(id)sender;
+- (IBAction)didPressFAQ:(id)sender;
 
 @end

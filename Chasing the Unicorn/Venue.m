@@ -28,4 +28,31 @@
     return newVenue;
 }
 
+- (NSString *)escapedName
+{
+    return (__bridge NSString *)CFURLCreateStringByAddingPercentEscapes(NULL,
+                                                                        (__bridge CFStringRef)name, NULL,
+                                                                        (CFStringRef)@"!*'();:@&=+$,/?%#[]",
+                                                                        kCFStringEncodingUTF8);
+}
+
+-(NSString *) latLngString{    
+        return [NSString stringWithFormat:@"%f,%f(%@)",lat,lng,self.escapedName];
+}
+
+-(NSURL *) foursquareURL{    
+    NSURL *fsURL = [NSURL URLWithString:[NSString stringWithFormat:@"foursquare://venues/%@",fsId]];
+    UIApplication* app = [UIApplication sharedApplication];
+    if ([app canOpenURL:fsURL]) {
+        return fsURL;
+    } else {
+        return [NSURL URLWithString:[NSString stringWithFormat:@"http://foursquare.com/v/%@",fsId]];
+    }
+}
+
+-(NSURL *) mapsURL{
+    return [NSURL URLWithString:[NSString stringWithFormat:@"http://maps.google.com/maps?q=loc:%@",self.latLngString]];
+}
+
+
 @end

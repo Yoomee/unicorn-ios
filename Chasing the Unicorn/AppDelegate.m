@@ -25,16 +25,8 @@
     self.splashScreenController = [[SplashScreenController alloc] initWithNibName:@"SplashScreenController" bundle:nil];
     self.window.rootViewController = self.splashScreenController;    
     [self.window makeKeyAndVisible];
-    
-    NSURL *testUrl = [NSURL URLWithString:@"foursquare://venues/4dd3be4f45dd98b61e7365d1"];
-    if ([application canOpenURL:testUrl]) {
-        NSLog(@"canOpenUrl!");
-    } else {
-        NSLog(@"no canOpenUrl");
-    }
-    
-//    [self performSelector:@selector(hideSplashScreen) withObject:nil afterDelay: 2.5f];    
-    [self performSelector:@selector(hideSplashScreen) withObject:nil afterDelay: 0.0f];    
+    [self performSelector:@selector(hideSplashScreen) withObject:nil afterDelay: 2.5f];    
+    //[self performSelector:@selector(hideSplashScreen) withObject:nil afterDelay: 0.0f];    
 
     return YES;
 }

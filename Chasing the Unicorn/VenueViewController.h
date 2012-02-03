@@ -14,6 +14,10 @@
 @property (unsafe_unretained, nonatomic) IBOutlet UILabel *venueNameLabel;
 @property (unsafe_unretained, nonatomic) IBOutlet UILabel *venueAddressLabel;
 @property (strong, nonatomic) Venue *venue;
-- (IBAction)hideVenueView:(id)sender;
+
 -(void)configureView;
+
+- (IBAction)hideVenueView:(id)sender;
+- (IBAction)didPressShowInMapsButton:(id)sender;
+- (IBAction)didPressShowInFoursquare:(id)sender;
 @end

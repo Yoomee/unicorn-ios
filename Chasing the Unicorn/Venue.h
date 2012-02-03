@@ -22,4 +22,8 @@
 
 +(Venue *) initWithDictionary: (NSDictionary *) dictionary;
 
+-(NSString *) latLngString;
+-(NSURL *) foursquareURL;
+-(NSURL *) mapsURL;
+
 @end

@@ -74,4 +74,11 @@
         [self configureView];
 	}    
 }
+- (IBAction)didPressShowInMapsButton:(id)sender {
+    [[UIApplication sharedApplication] openURL:self.venue.mapsURL];
+}
+
+- (IBAction)didPressShowInFoursquare:(id)sender {
+    [[UIApplication sharedApplication] openURL:self.venue.foursquareURL];
+}
 @end

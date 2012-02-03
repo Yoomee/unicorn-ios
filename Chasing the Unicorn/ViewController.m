@@ -19,8 +19,8 @@
 @synthesize otherVenue2Button;
 @synthesize otherVenue3Button;
 @synthesize otherVenue4Button;
-@synthesize currentVenueArrowButton;
 @synthesize refreshButton;
+@synthesize searchingText;
 @synthesize activityIndicator;
 
 @synthesize venueViewController = _venueViewController;
@@ -49,30 +49,19 @@
 -(void)configureView{
     [currentVenueButton setTitle:self.currentVenue.name forState:UIControlStateNormal];
     [currentVenueButton setEnabled:YES];
-    [currentVenueArrowButton setEnabled:YES];
     for (int idx = 0; idx < 4; idx++) {
         [[self.otherVenueButtons objectAtIndex:idx] setTitle:[[self.venues objectAtIndex:(idx + 1)] name] forState:UIControlStateNormal];
         [[self.otherVenueButtons objectAtIndex:idx] setEnabled:YES];
     }
 }
 
--(void)clearView{
-    [currentVenueButton setTitle:@"" forState:UIControlStateNormal];
+-(void)disableView:(BOOL)clear{
+    if (clear)
+        [currentVenueButton setTitle:@"" forState:UIControlStateNormal];
     [currentVenueButton setEnabled:NO];
-    [currentVenueArrowButton setEnabled:NO];
     for (int idx = 0; idx < 4; idx++) {
-        [[self.otherVenueButtons objectAtIndex:idx] setTitle:@"" forState:UIControlStateNormal];
-        [[self.otherVenueButtons objectAtIndex:idx] setEnabled:NO];
-    }
-}
-
-
--(void)disableView{
-    [currentVenueButton setTitle:@"?????" forState:UIControlStateNormal];
-    [currentVenueButton setEnabled:NO];
-    [currentVenueArrowButton setEnabled:NO];
-    for (int idx = 0; idx < 4; idx++) {
-        [[self.otherVenueButtons objectAtIndex:idx] setTitle:@"?????" forState:UIControlStateNormal];
+        if (clear)
+            [[self.otherVenueButtons objectAtIndex:idx] setTitle:@"" forState:UIControlStateNormal];
         [[self.otherVenueButtons objectAtIndex:idx] setEnabled:NO];
     }
 }
@@ -84,6 +73,8 @@
     NSURL *venuesUrl = [NSURL URLWithString:@"http://dl.dropbox.com/u/1641228/unicorn/venues.json"];
     UIApplication* app = [UIApplication sharedApplication];
     app.networkActivityIndicatorVisible = YES;
+    [self disableView:NO];
+    [self.searchingText setHidden:NO];
     [self.refreshButton setHidden:YES];
     [self.activityIndicator setHidden:NO];
     [self.activityIndicator startAnimating];
@@ -104,10 +95,11 @@
                 }];
                 [self configureView];
             } else {
-                UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Unicorn Not Found" message:@"Check you're connected to Internet and try again later.\nHe's always on the move." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"404 Unicorn Not Found" message:@"Check you're connected to the Internets and try again later.\nHe's always on the move." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
                 [alertView show];
-                [self disableView];
+                [self disableView:YES];
             }
+            [self.searchingText setHidden:YES];
             [self.activityIndicator stopAnimating];
             [self.activityIndicator setHidden:YES];
             [self.refreshButton setHidden:NO];
@@ -123,6 +115,7 @@
 - (void)viewDidLoad
 { 
     [super viewDidLoad];
+    [self disableView:YES];
 }
 
 - (void)viewDidUnload
@@ -133,9 +126,9 @@
     [self setOtherVenue3Button:nil];
     [self setOtherVenue4Button:nil];
     [self setVenueViewController:nil];
-    [self setCurrentVenueArrowButton:nil];
     [self setActivityIndicator:nil];
     [self setRefreshButton:nil];
+    [self setSearchingText:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -144,7 +137,6 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    [self clearView];
     [self fetchVenues];
 }
 
