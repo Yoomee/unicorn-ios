@@ -53,6 +53,6 @@
 }
 
 - (IBAction)didPressFAQ:(id)sender {
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.yoomee.com"]];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://sxswunicorn.herokuapp.com/faq"]];
 }
 @end

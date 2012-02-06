@@ -19,11 +19,20 @@
 @property (unsafe_unretained, nonatomic) IBOutlet UIButton *refreshButton;
 @property (unsafe_unretained, nonatomic) IBOutlet UILabel *searchingText;
 @property (unsafe_unretained, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
+@property (unsafe_unretained, nonatomic) IBOutlet UIImageView *bgImageView;
+
+@property (unsafe_unretained, nonatomic) IBOutlet UIView *messageView;
+@property (unsafe_unretained, nonatomic) IBOutlet UITextView *messageTextView;
+@property (unsafe_unretained, nonatomic) IBOutlet UIButton *messageButton;
+
 @property (nonatomic, strong) NSMutableArray *venues;
 @property (strong, nonatomic) VenueViewController *venueViewController;
+
+-(void)showMessage:(NSString *)message withID:(NSInteger)messageID buttonText:(NSString *)buttonText buttonHidden:(BOOL)buttonHidden;
 
 - (IBAction)showAbout:(id)sender;
 - (IBAction)showVenue:(id)sender;
 - (IBAction)refreshVenues:(id)sender;
+- (IBAction)didPressMessageButton:(id)sender;
 
 @end

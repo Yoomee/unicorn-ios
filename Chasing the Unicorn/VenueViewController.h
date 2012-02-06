@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import <MapKit/MapKit.h>
 @class Venue;
 
 @interface VenueViewController : UIViewController
+@property (unsafe_unretained, nonatomic) IBOutlet MKMapView *mapView;
 @property (unsafe_unretained, nonatomic) IBOutlet UILabel *venueNameLabel;
 @property (unsafe_unretained, nonatomic) IBOutlet UILabel *venueAddressLabel;
 @property (strong, nonatomic) Venue *venue;

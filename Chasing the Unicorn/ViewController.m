@@ -22,6 +22,10 @@
 @synthesize refreshButton;
 @synthesize searchingText;
 @synthesize activityIndicator;
+@synthesize bgImageView;
+@synthesize messageView;
+@synthesize messageTextView;
+@synthesize messageButton;
 
 @synthesize venueViewController = _venueViewController;
 
@@ -69,8 +73,15 @@
 
 #pragma mark - Data
 
+-(void)show404Error{
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"404 Unicorn Not Found" message:@"Check you're connected to the Internets and try again later.\nHe's always on the move." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [alertView show];
+    [self disableView:YES];
+}
+
 -(void) fetchVenues{
-    NSURL *venuesUrl = [NSURL URLWithString:@"http://dl.dropbox.com/u/1641228/unicorn/venues.json"];
+    NSURL *venuesUrl = [NSURL URLWithString:@"http://10.0.1.198:3000/api.json"];
+//    NSURL *venuesUrl = [NSURL URLWithString:@"http://sxswunicorn.herokuapp.com/api.json"];
     UIApplication* app = [UIApplication sharedApplication];
     app.networkActivityIndicatorVisible = YES;
     [self disableView:NO];
@@ -79,25 +90,30 @@
     [self.activityIndicator setHidden:NO];
     [self.activityIndicator startAnimating];
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
-        NSData *venuesData = [NSData dataWithContentsOfURL:venuesUrl];
+        NSData *resData = [NSData dataWithContentsOfURL:venuesUrl];
         app.networkActivityIndicatorVisible = NO;
         dispatch_async(dispatch_get_main_queue(), ^{
-            if (venuesData != nil){
+            if (resData != nil){
                 NSError *jsonParsingError = nil;
-                NSDictionary *venuesDictionary = [NSJSONSerialization JSONObjectWithData:venuesData options:0 error:&jsonParsingError];
-                
-                NSArray* latestVenues = [venuesDictionary objectForKey:@"venues"];
-                self.venues = [[NSMutableArray alloc] init];            
-                
-                [latestVenues enumerateObjectsUsingBlock:^(NSDictionary *venueDict, NSUInteger idx, BOOL *stop) {
-                    Venue *venue = [Venue initWithDictionary:venueDict];
-                    [self.venues addObject:venue];
-                }];
-                [self configureView];
+                NSDictionary *resDict = [NSJSONSerialization JSONObjectWithData:resData options:0 error:&jsonParsingError];
+                NSDictionary *messageDict = [resDict objectForKey:@"message"];
+                if (messageDict != nil){
+                    [self showMessage:[messageDict objectForKey:@"text"] withID:[[messageDict objectForKey:@"id"] integerValue] buttonText:[messageDict objectForKey:@"button_text"] buttonHidden:[[messageDict objectForKey:@"button_hidden"] boolValue]];
+                }
+                NSArray* latestVenues = [resDict objectForKey:@"venues"];
+                if(latestVenues == nil || (NSNull *)latestVenues == [NSNull null]){
+                    if(messageDict == nil)
+                        [self show404Error];
+                } else{
+                    self.venues = [[NSMutableArray alloc] init];            
+                    [latestVenues enumerateObjectsUsingBlock:^(NSDictionary *venueDict, NSUInteger idx, BOOL *stop) {
+                        Venue *venue = [Venue initWithDictionary:venueDict];
+                        [self.venues addObject:venue];
+                    }];
+                    [self configureView];
+                }
             } else {
-                UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"404 Unicorn Not Found" message:@"Check you're connected to the Internets and try again later.\nHe's always on the move." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
-                [alertView show];
-                [self disableView:YES];
+                [self show404Error];
             }
             [self.searchingText setHidden:YES];
             [self.activityIndicator stopAnimating];
@@ -116,6 +132,14 @@
 { 
     [super viewDidLoad];
     [self disableView:YES];
+//    UISwipeGestureRecognizer *swipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipe:)];
+//    swipe.direction = UISwipeGestureRecognizerDirectionUp;
+//    [currentVenueButton addGestureRecognizer:swipe];
+//    for (int idx = 0; idx < 4; idx++) {
+//        [[self.otherVenueButtons objectAtIndex:idx] addGestureRecognizer:swipe
+//         ];
+//    }
+
 }
 
 - (void)viewDidUnload
@@ -129,9 +153,11 @@
     [self setActivityIndicator:nil];
     [self setRefreshButton:nil];
     [self setSearchingText:nil];
+    [self setMessageView:nil];
+    [self setMessageTextView:nil];
+    [self setMessageButton:nil];
+    [self setBgImageView:nil];
     [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -157,8 +183,12 @@
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    // Return YES for supported orientations
     return UIInterfaceOrientationIsPortrait(interfaceOrientation);
+}
+
+- (IBAction)handleSwipe:(UISwipeGestureRecognizer *)recognizer{
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"No scrolling" message:@"Funny scrolling message!" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [alertView show];
 }
 
 - (IBAction)showAbout:(id)sender {
@@ -178,8 +208,32 @@
 	[self presentModalViewController:self.venueViewController animated:YES];
 }
 
+-(void) showMessage:(NSString *)message withID:(NSInteger)messageID buttonText:(NSString *) buttonText buttonHidden:(BOOL)buttonHidden{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSInteger lastViewedMessageID = [defaults integerForKey:@"messageID"];
+    if (messageID > lastViewedMessageID){
+        [self.messageTextView setText:message];
+        if (buttonText == (id)[NSNull null] || buttonText.length == 0 ) buttonText = @"OK";
+        [self.messageButton setTitle:buttonText forState:UIControlStateNormal];
+        [self.messageButton setHidden:buttonHidden];
+        [self.messageButton setTag:messageID];
+        [self.bgImageView setImage:[UIImage imageNamed:@"ViewControllerBGMessage.png"]];
+        if(messageView.hidden || messageView.frame.size.height == 0.0f){
+            [messageView setHidden:NO];
+        }
+    }
+}
+
 - (IBAction)refreshVenues:(id)sender {
     [self fetchVenues];
+}
+
+- (IBAction)didPressMessageButton:(id)sender {    
+    [self.bgImageView setImage:[UIImage imageNamed:@"ViewControllerBG.png"]];
+    [messageView setHidden:YES];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setInteger:[sender tag] forKey:@"messageID"];
+    [defaults synchronize];
 }
 
 @end

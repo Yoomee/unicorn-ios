@@ -10,6 +10,7 @@
 #import "Venue.h"
 
 @implementation VenueViewController
+@synthesize mapView;
 @synthesize venueNameLabel;
 @synthesize venueAddressLabel;
 @synthesize venue = _venue;
@@ -44,6 +45,7 @@
 {
     [self setVenueNameLabel:nil];
     [self setVenueAddressLabel:nil];
+    [self setMapView:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -63,6 +65,26 @@
     if (self.venue != nil) {
         [self.venueAddressLabel setText:self.venue.address];
         [self.venueNameLabel setText:self.venue.name];
+        
+        NSArray *existingPoints = mapView.annotations;
+        if ([existingPoints count] > 0)
+            [mapView removeAnnotations:existingPoints];
+        
+        CLLocationCoordinate2D venueCoord;
+        
+        venueCoord.latitude = self.venue.lat;
+        venueCoord.longitude = self.venue.lng;
+        
+        MKCoordinateRegion region =
+        MKCoordinateRegionMakeWithDistance (
+                                            venueCoord, 500, 500);
+        [mapView setRegion:region animated:NO];
+        
+        MKPointAnnotation *mapMarker = [[MKPointAnnotation alloc] init];
+        mapMarker.coordinate = venueCoord;
+        mapMarker.title = self.venue.name;
+        mapMarker.subtitle = self.venue.address;
+        [mapView addAnnotation:mapMarker];
 
     }
 }

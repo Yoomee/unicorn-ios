@@ -17,11 +17,17 @@
 		5B33474814DAB46A00A3FCE1 /* app_icon_57.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B33474714DAB46900A3FCE1 /* app_icon_57.png */; };
 		5B3FCEB314DC0A6E00BC3E01 /* OtherVenueButtonBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B3FCEB214DC0A6E00BC3E01 /* OtherVenueButtonBG.png */; };
 		5B3FCEB614DC0BCB00BC3E01 /* OtherVenueButtonBGHighlight.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B3FCEB514DC0BCB00BC3E01 /* OtherVenueButtonBGHighlight.png */; };
-		5B3FCEB814DC323800BC3E01 /* foursquare.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B3FCEB714DC323800BC3E01 /* foursquare.png */; };
-		5B3FCEBA14DC339300BC3E01 /* maps.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B3FCEB914DC339300BC3E01 /* maps.png */; };
 		5B3FCEBC14DC384B00BC3E01 /* ViewControllerBG@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B3FCEBB14DC384B00BC3E01 /* ViewControllerBG@2x.png */; };
 		5B3FCEBE14DC3B4800BC3E01 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B3FCEBD14DC3B4800BC3E01 /* Default@2x.png */; };
 		5B3FCEC014DC3FCE00BC3E01 /* AboutViewBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B3FCEBF14DC3FCE00BC3E01 /* AboutViewBG.png */; };
+		5BA7BE8314DFFF44000F29C5 /* VenueViewControllerBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BA7BE8114DFFF44000F29C5 /* VenueViewControllerBG.png */; };
+		5BA7BE8414DFFF44000F29C5 /* VenueViewControllerBG@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BA7BE8214DFFF44000F29C5 /* VenueViewControllerBG@2x.png */; };
+		5BA7BE8714E008AA000F29C5 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BA7BE8614E008AA000F29C5 /* MapKit.framework */; };
+		5BA7BE8A14E01D94000F29C5 /* MessageViewBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BA7BE8814E01D94000F29C5 /* MessageViewBG.png */; };
+		5BA7BE8B14E01D94000F29C5 /* MessageViewBG@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BA7BE8914E01D94000F29C5 /* MessageViewBG@2x.png */; };
+		5BA7BE8E14E0213D000F29C5 /* ViewControllerBGMessage.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BA7BE8C14E0213D000F29C5 /* ViewControllerBGMessage.png */; };
+		5BA7BE8F14E0213D000F29C5 /* ViewControllerBGMessage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BA7BE8D14E0213D000F29C5 /* ViewControllerBGMessage@2x.png */; };
+		5BA7BE9814E03617000F29C5 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BA7BE9714E03617000F29C5 /* CoreLocation.framework */; };
 		5BAF7CFC14CD8C75006D4638 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BAF7CFB14CD8C75006D4638 /* UIKit.framework */; };
 		5BAF7CFE14CD8C75006D4638 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BAF7CFD14CD8C75006D4638 /* Foundation.framework */; };
 		5BAF7D0014CD8C75006D4638 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BAF7CFF14CD8C75006D4638 /* CoreGraphics.framework */; };
@@ -48,11 +54,17 @@
 		5B33474714DAB46900A3FCE1 /* app_icon_57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = app_icon_57.png; path = ../app_icon_57.png; sourceTree = "<group>"; };
 		5B3FCEB214DC0A6E00BC3E01 /* OtherVenueButtonBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = OtherVenueButtonBG.png; sourceTree = "<group>"; };
 		5B3FCEB514DC0BCB00BC3E01 /* OtherVenueButtonBGHighlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = OtherVenueButtonBGHighlight.png; sourceTree = "<group>"; };
-		5B3FCEB714DC323800BC3E01 /* foursquare.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = foursquare.png; sourceTree = "<group>"; };
-		5B3FCEB914DC339300BC3E01 /* maps.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = maps.png; sourceTree = "<group>"; };
 		5B3FCEBB14DC384B00BC3E01 /* ViewControllerBG@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ViewControllerBG@2x.png"; sourceTree = "<group>"; };
 		5B3FCEBD14DC3B4800BC3E01 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		5B3FCEBF14DC3FCE00BC3E01 /* AboutViewBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AboutViewBG.png; sourceTree = "<group>"; };
+		5BA7BE8114DFFF44000F29C5 /* VenueViewControllerBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = VenueViewControllerBG.png; sourceTree = "<group>"; };
+		5BA7BE8214DFFF44000F29C5 /* VenueViewControllerBG@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "VenueViewControllerBG@2x.png"; sourceTree = "<group>"; };
+		5BA7BE8614E008AA000F29C5 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		5BA7BE8814E01D94000F29C5 /* MessageViewBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MessageViewBG.png; sourceTree = "<group>"; };
+		5BA7BE8914E01D94000F29C5 /* MessageViewBG@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MessageViewBG@2x.png"; sourceTree = "<group>"; };
+		5BA7BE8C14E0213D000F29C5 /* ViewControllerBGMessage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ViewControllerBGMessage.png; sourceTree = "<group>"; };
+		5BA7BE8D14E0213D000F29C5 /* ViewControllerBGMessage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ViewControllerBGMessage@2x.png"; sourceTree = "<group>"; };
+		5BA7BE9714E03617000F29C5 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		5BAF7CF714CD8C75006D4638 /* Chase the Unicorn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Chase the Unicorn.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BAF7CFB14CD8C75006D4638 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		5BAF7CFD14CD8C75006D4638 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -78,6 +90,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BA7BE9814E03617000F29C5 /* CoreLocation.framework in Frameworks */,
+				5BA7BE8714E008AA000F29C5 /* MapKit.framework in Frameworks */,
 				5BAF7CFC14CD8C75006D4638 /* UIKit.framework in Frameworks */,
 				5BAF7CFE14CD8C75006D4638 /* Foundation.framework in Frameworks */,
 				5BAF7D0014CD8C75006D4638 /* CoreGraphics.framework in Frameworks */,
@@ -116,6 +130,7 @@
 		5BAF7CEC14CD8C75006D4638 = {
 			isa = PBXGroup;
 			children = (
+				5BA7BE9714E03617000F29C5 /* CoreLocation.framework */,
 				5BAF7D0114CD8C75006D4638 /* Chasing the Unicorn */,
 				5BAF7CFA14CD8C75006D4638 /* Frameworks */,
 				5BAF7CF814CD8C75006D4638 /* Products */,
@@ -133,6 +148,7 @@
 		5BAF7CFA14CD8C75006D4638 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5BA7BE8614E008AA000F29C5 /* MapKit.framework */,
 				5BAF7CFB14CD8C75006D4638 /* UIKit.framework */,
 				5BAF7CFD14CD8C75006D4638 /* Foundation.framework */,
 				5BAF7CFF14CD8C75006D4638 /* CoreGraphics.framework */,
@@ -168,8 +184,6 @@
 		5BAF7D1814CD8D94006D4638 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				5B3FCEB714DC323800BC3E01 /* foursquare.png */,
-				5B3FCEB914DC339300BC3E01 /* maps.png */,
 				5B10336F14DADEAE00381F14 /* Refresh.png */,
 				5B3FCEBF14DC3FCE00BC3E01 /* AboutViewBG.png */,
 				5B3FCEB214DC0A6E00BC3E01 /* OtherVenueButtonBG.png */,
@@ -177,8 +191,14 @@
 				5B33474714DAB46900A3FCE1 /* app_icon_57.png */,
 				5B33474514DAB0AB00A3FCE1 /* ViewControllerBG.png */,
 				5B3FCEBB14DC384B00BC3E01 /* ViewControllerBG@2x.png */,
+				5BA7BE8C14E0213D000F29C5 /* ViewControllerBGMessage.png */,
+				5BA7BE8D14E0213D000F29C5 /* ViewControllerBGMessage@2x.png */,
 				5B3346F714DA8AC200A3FCE1 /* Default.png */,
 				5B3FCEBD14DC3B4800BC3E01 /* Default@2x.png */,
+				5BA7BE8114DFFF44000F29C5 /* VenueViewControllerBG.png */,
+				5BA7BE8214DFFF44000F29C5 /* VenueViewControllerBG@2x.png */,
+				5BA7BE8814E01D94000F29C5 /* MessageViewBG.png */,
+				5BA7BE8914E01D94000F29C5 /* MessageViewBG@2x.png */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -254,11 +274,15 @@
 				5B10337014DADEAE00381F14 /* Refresh.png in Resources */,
 				5B3FCEB314DC0A6E00BC3E01 /* OtherVenueButtonBG.png in Resources */,
 				5B3FCEB614DC0BCB00BC3E01 /* OtherVenueButtonBGHighlight.png in Resources */,
-				5B3FCEB814DC323800BC3E01 /* foursquare.png in Resources */,
-				5B3FCEBA14DC339300BC3E01 /* maps.png in Resources */,
 				5B3FCEBC14DC384B00BC3E01 /* ViewControllerBG@2x.png in Resources */,
 				5B3FCEBE14DC3B4800BC3E01 /* Default@2x.png in Resources */,
 				5B3FCEC014DC3FCE00BC3E01 /* AboutViewBG.png in Resources */,
+				5BA7BE8314DFFF44000F29C5 /* VenueViewControllerBG.png in Resources */,
+				5BA7BE8414DFFF44000F29C5 /* VenueViewControllerBG@2x.png in Resources */,
+				5BA7BE8A14E01D94000F29C5 /* MessageViewBG.png in Resources */,
+				5BA7BE8B14E01D94000F29C5 /* MessageViewBG@2x.png in Resources */,
+				5BA7BE8E14E0213D000F29C5 /* ViewControllerBGMessage.png in Resources */,
+				5BA7BE8F14E0213D000F29C5 /* ViewControllerBGMessage@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,7 +376,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Chasing the Unicorn/Chase the Unicorn-Prefix.pch";
 				INFOPLIST_FILE = "Chasing the Unicorn/Chase the Unicorn-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "Chase the Unicorn";
 				WRAPPER_EXTENSION = app;
 			};
@@ -364,7 +388,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Chasing the Unicorn/Chase the Unicorn-Prefix.pch";
 				INFOPLIST_FILE = "Chasing the Unicorn/Chase the Unicorn-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "Chase the Unicorn";
 				WRAPPER_EXTENSION = app;
 			};
