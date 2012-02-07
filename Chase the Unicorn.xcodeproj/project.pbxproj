@@ -21,6 +21,15 @@
 		5B516E1914E135AC00E44BFE /* MessageButtonBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B516E1714E135AC00E44BFE /* MessageButtonBG.png */; };
 		5B516E1A14E135AC00E44BFE /* MessageButtonBG@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B516E1814E135AC00E44BFE /* MessageButtonBG@2x.png */; };
 		5B6D334E14E1878C000E1B72 /* AboutViewBG@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B6D334D14E1878C000E1B72 /* AboutViewBG@2x.png */; };
+		5B6D335114E18965000E1B72 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B6D335014E18965000E1B72 /* AudioToolbox.framework */; };
+		5B6D335414E18C49000E1B72 /* horse00.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5B6D335314E18C49000E1B72 /* horse00.wav */; };
+		5B6D335B14E18D7F000E1B72 /* horse01.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5B6D335514E18D7F000E1B72 /* horse01.wav */; };
+		5B6D335C14E18D7F000E1B72 /* horse02.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5B6D335614E18D7F000E1B72 /* horse02.wav */; };
+		5B6D335D14E18D7F000E1B72 /* horse03.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5B6D335714E18D7F000E1B72 /* horse03.wav */; };
+		5B6D335E14E18D7F000E1B72 /* horse04.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5B6D335814E18D7F000E1B72 /* horse04.wav */; };
+		5B6D335F14E18D7F000E1B72 /* horse05.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5B6D335914E18D7F000E1B72 /* horse05.wav */; };
+		5B6D336014E18D7F000E1B72 /* horse06.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5B6D335A14E18D7F000E1B72 /* horse06.wav */; };
+		5B6D336214E19910000E1B72 /* horse07.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5B6D336114E19910000E1B72 /* horse07.wav */; };
 		5BA7BE8314DFFF44000F29C5 /* VenueViewControllerBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BA7BE8114DFFF44000F29C5 /* VenueViewControllerBG.png */; };
 		5BA7BE8414DFFF44000F29C5 /* VenueViewControllerBG@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BA7BE8214DFFF44000F29C5 /* VenueViewControllerBG@2x.png */; };
 		5BA7BE8714E008AA000F29C5 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BA7BE8614E008AA000F29C5 /* MapKit.framework */; };
@@ -72,6 +81,15 @@
 		5B516E1714E135AC00E44BFE /* MessageButtonBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MessageButtonBG.png; sourceTree = "<group>"; };
 		5B516E1814E135AC00E44BFE /* MessageButtonBG@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MessageButtonBG@2x.png"; sourceTree = "<group>"; };
 		5B6D334D14E1878C000E1B72 /* AboutViewBG@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AboutViewBG@2x.png"; sourceTree = "<group>"; };
+		5B6D335014E18965000E1B72 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		5B6D335314E18C49000E1B72 /* horse00.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = horse00.wav; sourceTree = "<group>"; };
+		5B6D335514E18D7F000E1B72 /* horse01.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = horse01.wav; sourceTree = "<group>"; };
+		5B6D335614E18D7F000E1B72 /* horse02.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = horse02.wav; sourceTree = "<group>"; };
+		5B6D335714E18D7F000E1B72 /* horse03.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = horse03.wav; sourceTree = "<group>"; };
+		5B6D335814E18D7F000E1B72 /* horse04.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = horse04.wav; sourceTree = "<group>"; };
+		5B6D335914E18D7F000E1B72 /* horse05.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = horse05.wav; sourceTree = "<group>"; };
+		5B6D335A14E18D7F000E1B72 /* horse06.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = horse06.wav; sourceTree = "<group>"; };
+		5B6D336114E19910000E1B72 /* horse07.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = horse07.wav; sourceTree = "<group>"; };
 		5BA7BE8114DFFF44000F29C5 /* VenueViewControllerBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = VenueViewControllerBG.png; sourceTree = "<group>"; };
 		5BA7BE8214DFFF44000F29C5 /* VenueViewControllerBG@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "VenueViewControllerBG@2x.png"; sourceTree = "<group>"; };
 		5BA7BE8614E008AA000F29C5 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -119,6 +137,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B6D335114E18965000E1B72 /* AudioToolbox.framework in Frameworks */,
 				5BA7BE9814E03617000F29C5 /* CoreLocation.framework in Frameworks */,
 				5BA7BE8714E008AA000F29C5 /* MapKit.framework in Frameworks */,
 				5BAF7CFC14CD8C75006D4638 /* UIKit.framework in Frameworks */,
@@ -156,6 +175,21 @@
 			name = Views;
 			sourceTree = "<group>";
 		};
+		5B6D335214E18C3B000E1B72 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				5B6D335314E18C49000E1B72 /* horse00.wav */,
+				5B6D335514E18D7F000E1B72 /* horse01.wav */,
+				5B6D335614E18D7F000E1B72 /* horse02.wav */,
+				5B6D335714E18D7F000E1B72 /* horse03.wav */,
+				5B6D335814E18D7F000E1B72 /* horse04.wav */,
+				5B6D335914E18D7F000E1B72 /* horse05.wav */,
+				5B6D335A14E18D7F000E1B72 /* horse06.wav */,
+				5B6D336114E19910000E1B72 /* horse07.wav */,
+			);
+			name = Sounds;
+			sourceTree = "<group>";
+		};
 		5BA7BEA814E04790000F29C5 /* Animation */ = {
 			isa = PBXGroup;
 			children = (
@@ -191,6 +225,7 @@
 		5BAF7CFA14CD8C75006D4638 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5B6D335014E18965000E1B72 /* AudioToolbox.framework */,
 				5BA7BE9714E03617000F29C5 /* CoreLocation.framework */,
 				5BA7BE8614E008AA000F29C5 /* MapKit.framework */,
 				5BAF7CFB14CD8C75006D4638 /* UIKit.framework */,
@@ -203,6 +238,7 @@
 		5BAF7D0114CD8C75006D4638 /* Chase the Unicorn */ = {
 			isa = PBXGroup;
 			children = (
+				5B6D335214E18C3B000E1B72 /* Sounds */,
 				5BAF7D0A14CD8C75006D4638 /* AppDelegate.h */,
 				5BAF7D0B14CD8C75006D4638 /* AppDelegate.m */,
 				5BAF7D1E14CD9455006D4638 /* Models */,
@@ -348,6 +384,14 @@
 				5B516E1914E135AC00E44BFE /* MessageButtonBG.png in Resources */,
 				5B516E1A14E135AC00E44BFE /* MessageButtonBG@2x.png in Resources */,
 				5B6D334E14E1878C000E1B72 /* AboutViewBG@2x.png in Resources */,
+				5B6D335414E18C49000E1B72 /* horse00.wav in Resources */,
+				5B6D335B14E18D7F000E1B72 /* horse01.wav in Resources */,
+				5B6D335C14E18D7F000E1B72 /* horse02.wav in Resources */,
+				5B6D335D14E18D7F000E1B72 /* horse03.wav in Resources */,
+				5B6D335E14E18D7F000E1B72 /* horse04.wav in Resources */,
+				5B6D335F14E18D7F000E1B72 /* horse05.wav in Resources */,
+				5B6D336014E18D7F000E1B72 /* horse06.wav in Resources */,
+				5B6D336214E19910000E1B72 /* horse07.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

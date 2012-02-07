@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AudioToolbox/AudioToolbox.h>
 #import "Venue.h"
 #import "VenueViewController.h"
 #import "MyCLController.h"
+
 
 @interface ViewController : UIViewController
 @property (unsafe_unretained, nonatomic) IBOutlet UIButton *currentVenueButton;
@@ -27,6 +29,7 @@
 @property (unsafe_unretained, nonatomic) IBOutlet UIButton *messageButton;
 
 @property (nonatomic, strong) NSMutableArray *venues;
+@property (nonatomic, strong) NSMutableArray *soundFileObjects;
 @property (nonatomic, strong) MyCLController *locationController;
 @property (strong, nonatomic) VenueViewController *venueViewController;
 

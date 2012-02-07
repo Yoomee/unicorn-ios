@@ -14,6 +14,7 @@
 @implementation ViewController
 
 @synthesize venues;
+@synthesize soundFileObjects;
 @synthesize currentVenueButton;
 @synthesize otherVenue1Button;
 @synthesize otherVenue2Button;
@@ -139,6 +140,31 @@
     [self disableView:YES];
     locationController = [[MyCLController alloc] init];
     [locationController.locationManager startUpdatingLocation];
+    
+    soundFileObjects = [[NSMutableArray alloc] init];
+    
+    for (int i=0; i<8; i++) {
+        NSString *path = [NSString stringWithFormat:@"%@/horse0%i.wav", [[NSBundle mainBundle] resourcePath],i];
+        SystemSoundID soundID;
+        NSURL *filePath = [NSURL fileURLWithPath:path isDirectory:NO];
+        AudioServicesCreateSystemSoundID((__bridge CFURLRef)filePath, &soundID);
+        [soundFileObjects addObject:[NSNumber numberWithUnsignedLong:soundID]];
+    }
+}
+
+-(IBAction)didPressUnicorn{
+    int x = (arc4random() % 6) + 1;
+    SystemSoundID soundID = [[soundFileObjects objectAtIndex:x] unsignedLongValue];
+	AudioServicesPlaySystemSound(soundID);
+}
+
+-(IBAction)didPressUnicornHorn{
+    SystemSoundID soundID = [[soundFileObjects objectAtIndex:0] unsignedLongValue];
+	AudioServicesPlaySystemSound(soundID);
+}
+-(IBAction)didPressUnicornNose{
+    SystemSoundID soundID = [[soundFileObjects objectAtIndex:7] unsignedLongValue];
+	AudioServicesPlaySystemSound(soundID);
 }
 
 - (void)viewDidUnload
