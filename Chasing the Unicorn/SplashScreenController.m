@@ -9,6 +9,7 @@
 #import "SplashScreenController.h"
 
 @implementation SplashScreenController
+@synthesize imageView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -33,10 +34,21 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    NSArray * imageArray  = [[NSArray alloc] initWithObjects:
+                             [UIImage imageNamed:@"Loading1.png"],
+                             [UIImage imageNamed:@"Loading2.png"],
+                             [UIImage imageNamed:@"Loading3.png"],
+                             [UIImage imageNamed:@"Loading4.png"],
+                             nil];
+	imageView.animationImages = imageArray;
+	imageView.animationDuration = 0.8;
+    imageView.contentMode = UIViewContentModeBottom;
+	[imageView startAnimating];
 }
 
 - (void)viewDidUnload
 {
+    [self setImageView:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;

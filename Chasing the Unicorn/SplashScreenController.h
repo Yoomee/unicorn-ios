@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface SplashScreenController : UIViewController
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
 
 @end

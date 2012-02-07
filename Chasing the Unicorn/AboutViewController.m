@@ -1,6 +1,6 @@
 //
 //  AboutViewController.m
-//  Chasing the Unicorn
+//  Chase the Unicorn
 //
 //  Created by Matthew Atkins on 23/01/2012.
 //  Copyright (c) 2012 Yoomee. All rights reserved.
@@ -53,6 +53,6 @@
 }
 
 - (IBAction)didPressFAQ:(id)sender {
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://sxswunicorn.herokuapp.com/faq"]];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://chasetheunicorn.com/magic"]];
 }
 @end

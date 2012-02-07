@@ -1,6 +1,6 @@
 //
 //  AppDelegate.m
-//  Chasing the Unicorn
+//  Chase the Unicorn
 //
 //  Created by Matthew Atkins on 23/01/2012.
 //  Copyright (c) 2012 Yoomee. All rights reserved.
@@ -17,6 +17,17 @@
 @synthesize viewController = _viewController;
 @synthesize splashScreenController = _splashScreenController;
 
+-(void)setUUID{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    if([defaults stringForKey:@"uuid"] == nil){
+        CFUUIDRef myUUID = CFUUIDCreate(NULL);
+        NSString *myUUIDString = CFBridgingRelease(CFUUIDCreateString(NULL, myUUID));
+        CFRelease(myUUID);
+        [defaults setValue:myUUIDString forKey:@"uuid"];
+        [defaults synchronize];
+    }
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
@@ -25,9 +36,8 @@
     self.splashScreenController = [[SplashScreenController alloc] initWithNibName:@"SplashScreenController" bundle:nil];
     self.window.rootViewController = self.splashScreenController;    
     [self.window makeKeyAndVisible];
-    [self performSelector:@selector(hideSplashScreen) withObject:nil afterDelay: 2.5f];    
-    //[self performSelector:@selector(hideSplashScreen) withObject:nil afterDelay: 0.0f];    
-
+    [self performSelector:@selector(hideSplashScreen) withObject:nil afterDelay: 2.5f];
+    [self setUUID];
     return YES;
 }
 

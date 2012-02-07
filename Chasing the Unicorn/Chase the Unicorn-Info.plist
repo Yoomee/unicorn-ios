@@ -10,7 +10,8 @@
 	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundleIconFiles</key>
 	<array>
-		<string>app_icon_57.png</string>
+		<string>icon_114.png</string>
+		<string>icon_57.png</string>
 	</array>
 	<key>CFBundleIcons</key>
 	<dict>
@@ -18,14 +19,15 @@
 		<dict>
 			<key>CFBundleIconFiles</key>
 			<array>
-				<string>app_icon_57.png</string>
+				<string>icon_114.png</string>
+				<string>icon_57.png</string>
 			</array>
 			<key>UIPrerenderedIcon</key>
 			<true/>
 		</dict>
 	</dict>
 	<key>CFBundleIdentifier</key>
-	<string>Yoomee.${PRODUCT_NAME:rfc1034identifier}</string>
+	<string>com.yoomee.chasetheunicorn</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>

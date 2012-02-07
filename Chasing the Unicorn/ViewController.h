@@ -1,6 +1,6 @@
 //
 //  ViewController.h
-//  Chasing the Unicorn
+//  Chase the Unicorn
 //
 //  Created by Matthew Atkins on 23/01/2012.
 //  Copyright (c) 2012 Yoomee. All rights reserved.
@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "Venue.h"
 #import "VenueViewController.h"
+#import "MyCLController.h"
 
 @interface ViewController : UIViewController
 @property (unsafe_unretained, nonatomic) IBOutlet UIButton *currentVenueButton;
@@ -26,6 +27,7 @@
 @property (unsafe_unretained, nonatomic) IBOutlet UIButton *messageButton;
 
 @property (nonatomic, strong) NSMutableArray *venues;
+@property (nonatomic, strong) MyCLController *locationController;
 @property (strong, nonatomic) VenueViewController *venueViewController;
 
 -(void)showMessage:(NSString *)message withID:(NSInteger)messageID buttonText:(NSString *)buttonText buttonHidden:(BOOL)buttonHidden;

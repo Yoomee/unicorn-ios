@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		5B10337014DADEAE00381F14 /* Refresh.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B10336F14DADEAE00381F14 /* Refresh.png */; };
-		5B3346F914DA8AC200A3FCE1 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B3346F714DA8AC200A3FCE1 /* Default.png */; };
 		5B33473714DA8F2000A3FCE1 /* SplashScreenController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B33473514DA8F2000A3FCE1 /* SplashScreenController.m */; };
 		5B33473814DA8F2000A3FCE1 /* SplashScreenController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B33473614DA8F2000A3FCE1 /* SplashScreenController.xib */; };
 		5B33474114DAABEC00A3FCE1 /* VenueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B33473F14DAABEB00A3FCE1 /* VenueViewController.m */; };
@@ -18,8 +17,9 @@
 		5B3FCEB314DC0A6E00BC3E01 /* OtherVenueButtonBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B3FCEB214DC0A6E00BC3E01 /* OtherVenueButtonBG.png */; };
 		5B3FCEB614DC0BCB00BC3E01 /* OtherVenueButtonBGHighlight.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B3FCEB514DC0BCB00BC3E01 /* OtherVenueButtonBGHighlight.png */; };
 		5B3FCEBC14DC384B00BC3E01 /* ViewControllerBG@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B3FCEBB14DC384B00BC3E01 /* ViewControllerBG@2x.png */; };
-		5B3FCEBE14DC3B4800BC3E01 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B3FCEBD14DC3B4800BC3E01 /* Default@2x.png */; };
 		5B3FCEC014DC3FCE00BC3E01 /* AboutViewBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B3FCEBF14DC3FCE00BC3E01 /* AboutViewBG.png */; };
+		5B516E1914E135AC00E44BFE /* MessageButtonBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B516E1714E135AC00E44BFE /* MessageButtonBG.png */; };
+		5B516E1A14E135AC00E44BFE /* MessageButtonBG@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B516E1814E135AC00E44BFE /* MessageButtonBG@2x.png */; };
 		5BA7BE8314DFFF44000F29C5 /* VenueViewControllerBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BA7BE8114DFFF44000F29C5 /* VenueViewControllerBG.png */; };
 		5BA7BE8414DFFF44000F29C5 /* VenueViewControllerBG@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BA7BE8214DFFF44000F29C5 /* VenueViewControllerBG@2x.png */; };
 		5BA7BE8714E008AA000F29C5 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BA7BE8614E008AA000F29C5 /* MapKit.framework */; };
@@ -28,6 +28,19 @@
 		5BA7BE8E14E0213D000F29C5 /* ViewControllerBGMessage.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BA7BE8C14E0213D000F29C5 /* ViewControllerBGMessage.png */; };
 		5BA7BE8F14E0213D000F29C5 /* ViewControllerBGMessage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BA7BE8D14E0213D000F29C5 /* ViewControllerBGMessage@2x.png */; };
 		5BA7BE9814E03617000F29C5 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BA7BE9714E03617000F29C5 /* CoreLocation.framework */; };
+		5BA7BE9B14E03787000F29C5 /* MyCLController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA7BE9A14E03787000F29C5 /* MyCLController.m */; };
+		5BA7BE9F14E04035000F29C5 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BA7BE9E14E04035000F29C5 /* Default@2x.png */; };
+		5BA7BEA314E0407C000F29C5 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BA7BEA214E0407C000F29C5 /* Default.png */; };
+		5BA7BEA514E0440C000F29C5 /* icon_57.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BA7BEA414E0440C000F29C5 /* icon_57.png */; };
+		5BA7BEA714E04413000F29C5 /* icon_114.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BA7BEA614E04413000F29C5 /* icon_114.png */; };
+		5BA7BEAC14E047EA000F29C5 /* Loading2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BA7BEA914E047EA000F29C5 /* Loading2@2x.png */; };
+		5BA7BEAD14E047EA000F29C5 /* Loading3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BA7BEAA14E047EA000F29C5 /* Loading3@2x.png */; };
+		5BA7BEAE14E047EA000F29C5 /* Loading4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BA7BEAB14E047EA000F29C5 /* Loading4@2x.png */; };
+		5BA7BEB114E04961000F29C5 /* Loading1.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BA7BEAF14E04961000F29C5 /* Loading1.png */; };
+		5BA7BEB214E04961000F29C5 /* Loading1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BA7BEB014E04961000F29C5 /* Loading1@2x.png */; };
+		5BA7BEB614E04972000F29C5 /* Loading2.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BA7BEB314E04972000F29C5 /* Loading2.png */; };
+		5BA7BEB714E04972000F29C5 /* Loading3.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BA7BEB414E04972000F29C5 /* Loading3.png */; };
+		5BA7BEB814E04972000F29C5 /* Loading4.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BA7BEB514E04972000F29C5 /* Loading4.png */; };
 		5BAF7CFC14CD8C75006D4638 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BAF7CFB14CD8C75006D4638 /* UIKit.framework */; };
 		5BAF7CFE14CD8C75006D4638 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BAF7CFD14CD8C75006D4638 /* Foundation.framework */; };
 		5BAF7D0014CD8C75006D4638 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BAF7CFF14CD8C75006D4638 /* CoreGraphics.framework */; };
@@ -43,7 +56,6 @@
 
 /* Begin PBXFileReference section */
 		5B10336F14DADEAE00381F14 /* Refresh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Refresh.png; sourceTree = "<group>"; };
-		5B3346F714DA8AC200A3FCE1 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		5B33473414DA8F2000A3FCE1 /* SplashScreenController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplashScreenController.h; sourceTree = "<group>"; };
 		5B33473514DA8F2000A3FCE1 /* SplashScreenController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplashScreenController.m; sourceTree = "<group>"; };
 		5B33473614DA8F2000A3FCE1 /* SplashScreenController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SplashScreenController.xib; sourceTree = "<group>"; };
@@ -55,8 +67,9 @@
 		5B3FCEB214DC0A6E00BC3E01 /* OtherVenueButtonBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = OtherVenueButtonBG.png; sourceTree = "<group>"; };
 		5B3FCEB514DC0BCB00BC3E01 /* OtherVenueButtonBGHighlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = OtherVenueButtonBGHighlight.png; sourceTree = "<group>"; };
 		5B3FCEBB14DC384B00BC3E01 /* ViewControllerBG@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ViewControllerBG@2x.png"; sourceTree = "<group>"; };
-		5B3FCEBD14DC3B4800BC3E01 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		5B3FCEBF14DC3FCE00BC3E01 /* AboutViewBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AboutViewBG.png; sourceTree = "<group>"; };
+		5B516E1714E135AC00E44BFE /* MessageButtonBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MessageButtonBG.png; sourceTree = "<group>"; };
+		5B516E1814E135AC00E44BFE /* MessageButtonBG@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MessageButtonBG@2x.png"; sourceTree = "<group>"; };
 		5BA7BE8114DFFF44000F29C5 /* VenueViewControllerBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = VenueViewControllerBG.png; sourceTree = "<group>"; };
 		5BA7BE8214DFFF44000F29C5 /* VenueViewControllerBG@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "VenueViewControllerBG@2x.png"; sourceTree = "<group>"; };
 		5BA7BE8614E008AA000F29C5 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -65,6 +78,20 @@
 		5BA7BE8C14E0213D000F29C5 /* ViewControllerBGMessage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ViewControllerBGMessage.png; sourceTree = "<group>"; };
 		5BA7BE8D14E0213D000F29C5 /* ViewControllerBGMessage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ViewControllerBGMessage@2x.png"; sourceTree = "<group>"; };
 		5BA7BE9714E03617000F29C5 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		5BA7BE9914E03787000F29C5 /* MyCLController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCLController.h; sourceTree = "<group>"; };
+		5BA7BE9A14E03787000F29C5 /* MyCLController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCLController.m; sourceTree = "<group>"; };
+		5BA7BE9E14E04035000F29C5 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../Default@2x.png"; sourceTree = "<group>"; };
+		5BA7BEA214E0407C000F29C5 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../Default.png; sourceTree = "<group>"; };
+		5BA7BEA414E0440C000F29C5 /* icon_57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_57.png; path = ../icon_57.png; sourceTree = "<group>"; };
+		5BA7BEA614E04413000F29C5 /* icon_114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_114.png; path = ../icon_114.png; sourceTree = "<group>"; };
+		5BA7BEA914E047EA000F29C5 /* Loading2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Loading2@2x.png"; sourceTree = "<group>"; };
+		5BA7BEAA14E047EA000F29C5 /* Loading3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Loading3@2x.png"; sourceTree = "<group>"; };
+		5BA7BEAB14E047EA000F29C5 /* Loading4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Loading4@2x.png"; sourceTree = "<group>"; };
+		5BA7BEAF14E04961000F29C5 /* Loading1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Loading1.png; sourceTree = "<group>"; };
+		5BA7BEB014E04961000F29C5 /* Loading1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Loading1@2x.png"; sourceTree = "<group>"; };
+		5BA7BEB314E04972000F29C5 /* Loading2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Loading2.png; sourceTree = "<group>"; };
+		5BA7BEB414E04972000F29C5 /* Loading3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Loading3.png; sourceTree = "<group>"; };
+		5BA7BEB514E04972000F29C5 /* Loading4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Loading4.png; sourceTree = "<group>"; };
 		5BAF7CF714CD8C75006D4638 /* Chase the Unicorn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Chase the Unicorn.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BAF7CFB14CD8C75006D4638 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		5BAF7CFD14CD8C75006D4638 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -127,11 +154,25 @@
 			name = Views;
 			sourceTree = "<group>";
 		};
+		5BA7BEA814E04790000F29C5 /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				5BA7BEAF14E04961000F29C5 /* Loading1.png */,
+				5BA7BEB314E04972000F29C5 /* Loading2.png */,
+				5BA7BEB414E04972000F29C5 /* Loading3.png */,
+				5BA7BEB514E04972000F29C5 /* Loading4.png */,
+				5BA7BEB014E04961000F29C5 /* Loading1@2x.png */,
+				5BA7BEA914E047EA000F29C5 /* Loading2@2x.png */,
+				5BA7BEAA14E047EA000F29C5 /* Loading3@2x.png */,
+				5BA7BEAB14E047EA000F29C5 /* Loading4@2x.png */,
+			);
+			name = Animation;
+			sourceTree = "<group>";
+		};
 		5BAF7CEC14CD8C75006D4638 = {
 			isa = PBXGroup;
 			children = (
-				5BA7BE9714E03617000F29C5 /* CoreLocation.framework */,
-				5BAF7D0114CD8C75006D4638 /* Chasing the Unicorn */,
+				5BAF7D0114CD8C75006D4638 /* Chase the Unicorn */,
 				5BAF7CFA14CD8C75006D4638 /* Frameworks */,
 				5BAF7CF814CD8C75006D4638 /* Products */,
 			);
@@ -148,6 +189,7 @@
 		5BAF7CFA14CD8C75006D4638 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5BA7BE9714E03617000F29C5 /* CoreLocation.framework */,
 				5BA7BE8614E008AA000F29C5 /* MapKit.framework */,
 				5BAF7CFB14CD8C75006D4638 /* UIKit.framework */,
 				5BAF7CFD14CD8C75006D4638 /* Foundation.framework */,
@@ -156,7 +198,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		5BAF7D0114CD8C75006D4638 /* Chasing the Unicorn */ = {
+		5BAF7D0114CD8C75006D4638 /* Chase the Unicorn */ = {
 			isa = PBXGroup;
 			children = (
 				5BAF7D0A14CD8C75006D4638 /* AppDelegate.h */,
@@ -167,12 +209,15 @@
 				5BAF7D1814CD8D94006D4638 /* Images */,
 				5BAF7D0214CD8C75006D4638 /* Supporting Files */,
 			);
+			name = "Chase the Unicorn";
 			path = "Chasing the Unicorn";
 			sourceTree = "<group>";
 		};
 		5BAF7D0214CD8C75006D4638 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5BA7BE9914E03787000F29C5 /* MyCLController.h */,
+				5BA7BE9A14E03787000F29C5 /* MyCLController.m */,
 				5BAF7D0314CD8C75006D4638 /* Chase the Unicorn-Info.plist */,
 				5BAF7D0414CD8C75006D4638 /* InfoPlist.strings */,
 				5BAF7D0714CD8C75006D4638 /* main.m */,
@@ -184,7 +229,14 @@
 		5BAF7D1814CD8D94006D4638 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				5BA7BEA814E04790000F29C5 /* Animation */,
+				5BA7BEA214E0407C000F29C5 /* Default.png */,
+				5BA7BE9E14E04035000F29C5 /* Default@2x.png */,
+				5BA7BEA614E04413000F29C5 /* icon_114.png */,
+				5BA7BEA414E0440C000F29C5 /* icon_57.png */,
 				5B10336F14DADEAE00381F14 /* Refresh.png */,
+				5B516E1714E135AC00E44BFE /* MessageButtonBG.png */,
+				5B516E1814E135AC00E44BFE /* MessageButtonBG@2x.png */,
 				5B3FCEBF14DC3FCE00BC3E01 /* AboutViewBG.png */,
 				5B3FCEB214DC0A6E00BC3E01 /* OtherVenueButtonBG.png */,
 				5B3FCEB514DC0BCB00BC3E01 /* OtherVenueButtonBGHighlight.png */,
@@ -193,8 +245,6 @@
 				5B3FCEBB14DC384B00BC3E01 /* ViewControllerBG@2x.png */,
 				5BA7BE8C14E0213D000F29C5 /* ViewControllerBGMessage.png */,
 				5BA7BE8D14E0213D000F29C5 /* ViewControllerBGMessage@2x.png */,
-				5B3346F714DA8AC200A3FCE1 /* Default.png */,
-				5B3FCEBD14DC3B4800BC3E01 /* Default@2x.png */,
 				5BA7BE8114DFFF44000F29C5 /* VenueViewControllerBG.png */,
 				5BA7BE8214DFFF44000F29C5 /* VenueViewControllerBG@2x.png */,
 				5BA7BE8814E01D94000F29C5 /* MessageViewBG.png */,
@@ -266,7 +316,6 @@
 				5BAF7D0614CD8C75006D4638 /* InfoPlist.strings in Resources */,
 				5BAF7D1214CD8C75006D4638 /* ViewController.xib in Resources */,
 				5BAF7D2C14CDCAE5006D4638 /* AboutViewController.xib in Resources */,
-				5B3346F914DA8AC200A3FCE1 /* Default.png in Resources */,
 				5B33473814DA8F2000A3FCE1 /* SplashScreenController.xib in Resources */,
 				5B33474214DAABEC00A3FCE1 /* VenueViewController.xib in Resources */,
 				5B33474614DAB0AB00A3FCE1 /* ViewControllerBG.png in Resources */,
@@ -275,7 +324,6 @@
 				5B3FCEB314DC0A6E00BC3E01 /* OtherVenueButtonBG.png in Resources */,
 				5B3FCEB614DC0BCB00BC3E01 /* OtherVenueButtonBGHighlight.png in Resources */,
 				5B3FCEBC14DC384B00BC3E01 /* ViewControllerBG@2x.png in Resources */,
-				5B3FCEBE14DC3B4800BC3E01 /* Default@2x.png in Resources */,
 				5B3FCEC014DC3FCE00BC3E01 /* AboutViewBG.png in Resources */,
 				5BA7BE8314DFFF44000F29C5 /* VenueViewControllerBG.png in Resources */,
 				5BA7BE8414DFFF44000F29C5 /* VenueViewControllerBG@2x.png in Resources */,
@@ -283,6 +331,20 @@
 				5BA7BE8B14E01D94000F29C5 /* MessageViewBG@2x.png in Resources */,
 				5BA7BE8E14E0213D000F29C5 /* ViewControllerBGMessage.png in Resources */,
 				5BA7BE8F14E0213D000F29C5 /* ViewControllerBGMessage@2x.png in Resources */,
+				5BA7BE9F14E04035000F29C5 /* Default@2x.png in Resources */,
+				5BA7BEA314E0407C000F29C5 /* Default.png in Resources */,
+				5BA7BEA514E0440C000F29C5 /* icon_57.png in Resources */,
+				5BA7BEA714E04413000F29C5 /* icon_114.png in Resources */,
+				5BA7BEAC14E047EA000F29C5 /* Loading2@2x.png in Resources */,
+				5BA7BEAD14E047EA000F29C5 /* Loading3@2x.png in Resources */,
+				5BA7BEAE14E047EA000F29C5 /* Loading4@2x.png in Resources */,
+				5BA7BEB114E04961000F29C5 /* Loading1.png in Resources */,
+				5BA7BEB214E04961000F29C5 /* Loading1@2x.png in Resources */,
+				5BA7BEB614E04972000F29C5 /* Loading2.png in Resources */,
+				5BA7BEB714E04972000F29C5 /* Loading3.png in Resources */,
+				5BA7BEB814E04972000F29C5 /* Loading4.png in Resources */,
+				5B516E1914E135AC00E44BFE /* MessageButtonBG.png in Resources */,
+				5B516E1A14E135AC00E44BFE /* MessageButtonBG@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,6 +362,7 @@
 				5BAF7D2B14CDCAE5006D4638 /* AboutViewController.m in Sources */,
 				5B33473714DA8F2000A3FCE1 /* SplashScreenController.m in Sources */,
 				5B33474114DAABEC00A3FCE1 /* VenueViewController.m in Sources */,
+				5BA7BE9B14E03787000F29C5 /* MyCLController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -373,11 +436,13 @@
 		5BAF7D1614CD8C75006D4638 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Chasing the Unicorn/Chase the Unicorn-Prefix.pch";
 				INFOPLIST_FILE = "Chasing the Unicorn/Chase the Unicorn-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "Chase the Unicorn";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -385,11 +450,13 @@
 		5BAF7D1714CD8C75006D4638 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Yoomee";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Chasing the Unicorn/Chase the Unicorn-Prefix.pch";
 				INFOPLIST_FILE = "Chasing the Unicorn/Chase the Unicorn-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "Chase the Unicorn";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "8461D38E-5335-455E-9AC0-14341658AD22";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

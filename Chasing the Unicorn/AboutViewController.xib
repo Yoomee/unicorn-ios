@@ -54,20 +54,19 @@
 					<object class="IBUIButton" id="611181273">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{55, 343}, {210, 34}}</string>
+						<string key="NSFrame">{{55, 343}, {210, 117}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView"/>
-						<object class="NSColor" key="IBUIBackgroundColor" id="297650838">
-							<int key="NSColorSpace">1</int>
-							<bytes key="NSRGB">MSAxIDEgMC4xAA</bytes>
-						</object>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<int key="IBUIContentHorizontalAlignment">0</int>
-						<int key="IBUIContentVerticalAlignment">0</int>
+						<double key="IBUIContentEdgeInsets.top">7</double>
+						<double key="IBUIContentEdgeInsets.bottom">0.0</double>
+						<double key="IBUIContentEdgeInsets.left">0.0</double>
+						<double key="IBUIContentEdgeInsets.right">0.0</double>
 						<string key="IBUINormalTitle">Back to the magic</string>
-						<object class="NSColor" key="IBUIHighlightedTitleColor" id="1067839575">
+						<object class="NSColor" key="IBUIHighlightedTitleColor" id="831971039">
 							<int key="NSColorSpace">2</int>
 							<bytes key="NSRGB">MC45OTIxNTY5MjI4IDAuMjAwMDAwMDE3OSAwLjYwMDAwMDAyMzgAA</bytes>
 						</object>
@@ -79,11 +78,11 @@
 							<int key="NSColorSpace">3</int>
 							<bytes key="NSWhite">MC41AA</bytes>
 						</object>
-						<object class="IBUIFontDescription" key="IBUIFontDescription" id="327922333">
+						<object class="IBUIFontDescription" key="IBUIFontDescription" id="250652092">
 							<int key="type">2</int>
 							<double key="pointSize">15</double>
 						</object>
-						<object class="NSFont" key="IBUIFont" id="532161803">
+						<object class="NSFont" key="IBUIFont" id="569925121">
 							<string key="NSName">Helvetica-Bold</string>
 							<double key="NSSize">15</double>
 							<int key="NSfFlags">16</int>
@@ -96,17 +95,20 @@
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="611181273"/>
-						<reference key="IBUIBackgroundColor" ref="297650838"/>
+						<object class="NSColor" key="IBUIBackgroundColor">
+							<int key="NSColorSpace">1</int>
+							<bytes key="NSRGB">MSAxIDEgMC4xAA</bytes>
+						</object>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<int key="IBUIContentHorizontalAlignment">0</int>
 						<int key="IBUIContentVerticalAlignment">0</int>
-						<string key="IBUINormalTitle">Read the FAQ </string>
-						<reference key="IBUIHighlightedTitleColor" ref="1067839575"/>
+						<string key="IBUINormalTitle">Find out more</string>
+						<reference key="IBUIHighlightedTitleColor" ref="831971039"/>
 						<reference key="IBUINormalTitleColor" ref="1059895005"/>
 						<reference key="IBUINormalTitleShadowColor" ref="188482188"/>
-						<reference key="IBUIFontDescription" ref="327922333"/>
-						<reference key="IBUIFont" ref="532161803"/>
+						<reference key="IBUIFontDescription" ref="250652092"/>
+						<reference key="IBUIFont" ref="569925121"/>
 					</object>
 				</array>
 				<string key="NSFrame">{{0, 20}, {320, 460}}</string>

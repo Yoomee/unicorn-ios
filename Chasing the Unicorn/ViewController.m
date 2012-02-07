@@ -1,6 +1,6 @@
 //
 //  ViewController.m
-//  Chasing the Unicorn
+//  Chase the Unicorn
 //
 //  Created by Matthew Atkins on 23/01/2012.
 //  Copyright (c) 2012 Yoomee. All rights reserved.
@@ -26,6 +26,7 @@
 @synthesize messageView;
 @synthesize messageTextView;
 @synthesize messageButton;
+@synthesize locationController;
 
 @synthesize venueViewController = _venueViewController;
 
@@ -74,14 +75,16 @@
 #pragma mark - Data
 
 -(void)show404Error{
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"404 Unicorn Not Found" message:@"Check you're connected to the Internets and try again later.\nHe's always on the move." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"404 Unicorn Not Found" message:@"Check you're connected to the Internet and try again later.\nHe's always on the move." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
     [alertView show];
     [self disableView:YES];
 }
 
 -(void) fetchVenues{
-    NSURL *venuesUrl = [NSURL URLWithString:@"http://10.0.1.198:3000/api.json"];
-//    NSURL *venuesUrl = [NSURL URLWithString:@"http://sxswunicorn.herokuapp.com/api.json"];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSString *urlString = [NSString stringWithFormat:@"http://chasetheunicorn.com/api.json?v=%@&m=%i&uuid=%@&lat=%f&lng=%f",[[NSBundle mainBundle] objectForInfoDictionaryKey:(NSString *)kCFBundleVersionKey],[defaults integerForKey:@"messageID"],[defaults stringForKey:@"uuid"],[defaults floatForKey:@"lat"],[defaults floatForKey:@"lng"]];
+    //NSString *urlString = [NSString stringWithFormat:@"http://10.0.1.4:3000/api.json?v=%@&m=%i&uuid=%@&lat=%f&lng=%f",[[NSBundle mainBundle] objectForInfoDictionaryKey:(NSString *)kCFBundleVersionKey],[defaults integerForKey:@"messageID"],[defaults stringForKey:@"uuid"],[defaults floatForKey:@"lat"],[defaults floatForKey:@"lng"]];
+    NSURL *venuesURL = [NSURL URLWithString:urlString];
     UIApplication* app = [UIApplication sharedApplication];
     app.networkActivityIndicatorVisible = YES;
     [self disableView:NO];
@@ -90,15 +93,17 @@
     [self.activityIndicator setHidden:NO];
     [self.activityIndicator startAnimating];
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
-        NSData *resData = [NSData dataWithContentsOfURL:venuesUrl];
+        NSData *resData = [NSData dataWithContentsOfURL:venuesURL];
         app.networkActivityIndicatorVisible = NO;
         dispatch_async(dispatch_get_main_queue(), ^{
             if (resData != nil){
                 NSError *jsonParsingError = nil;
                 NSDictionary *resDict = [NSJSONSerialization JSONObjectWithData:resData options:0 error:&jsonParsingError];
                 NSDictionary *messageDict = [resDict objectForKey:@"message"];
-                if (messageDict != nil){
+                if (messageDict != nil && (NSNull *)messageDict != [NSNull null]){
                     [self showMessage:[messageDict objectForKey:@"text"] withID:[[messageDict objectForKey:@"id"] integerValue] buttonText:[messageDict objectForKey:@"button_text"] buttonHidden:[[messageDict objectForKey:@"button_hidden"] boolValue]];
+                } else{
+                    [self didPressMessageButton:nil];
                 }
                 NSArray* latestVenues = [resDict objectForKey:@"venues"];
                 if(latestVenues == nil || (NSNull *)latestVenues == [NSNull null]){
@@ -132,14 +137,8 @@
 { 
     [super viewDidLoad];
     [self disableView:YES];
-//    UISwipeGestureRecognizer *swipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipe:)];
-//    swipe.direction = UISwipeGestureRecognizerDirectionUp;
-//    [currentVenueButton addGestureRecognizer:swipe];
-//    for (int idx = 0; idx < 4; idx++) {
-//        [[self.otherVenueButtons objectAtIndex:idx] addGestureRecognizer:swipe
-//         ];
-//    }
-
+    locationController = [[MyCLController alloc] init];
+    [locationController.locationManager startUpdatingLocation];
 }
 
 - (void)viewDidUnload
@@ -203,7 +202,6 @@
         [aVenueViewController setModalTransitionStyle:UIModalTransitionStylePartialCurl];
         _venueViewController = aVenueViewController;
     }
-    
     [self.venueViewController setVenue:[self.venues objectAtIndex:[sender tag]]];
 	[self presentModalViewController:self.venueViewController animated:YES];
 }
@@ -216,9 +214,14 @@
         if (buttonText == (id)[NSNull null] || buttonText.length == 0 ) buttonText = @"OK";
         [self.messageButton setTitle:buttonText forState:UIControlStateNormal];
         [self.messageButton setHidden:buttonHidden];
+        if (buttonHidden){
+            [messageTextView setFrame:CGRectMake(messageTextView.frame.origin.x, messageTextView.frame.origin.y, messageTextView.frame.size.width, 209.0f)];
+        } else {
+            [messageTextView setFrame:CGRectMake(messageTextView.frame.origin.x, messageTextView.frame.origin.y, messageTextView.frame.size.width, 168.0f)];
+        }
         [self.messageButton setTag:messageID];
         [self.bgImageView setImage:[UIImage imageNamed:@"ViewControllerBGMessage.png"]];
-        if(messageView.hidden || messageView.frame.size.height == 0.0f){
+        if(messageView.hidden){
             [messageView setHidden:NO];
         }
     }
@@ -232,7 +235,7 @@
     [self.bgImageView setImage:[UIImage imageNamed:@"ViewControllerBG.png"]];
     [messageView setHidden:YES];
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    [defaults setInteger:[sender tag] forKey:@"messageID"];
+    [defaults setInteger:[messageButton tag] forKey:@"messageID"];
     [defaults synchronize];
 }
 

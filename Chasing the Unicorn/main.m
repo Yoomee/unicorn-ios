@@ -1,6 +1,6 @@
 //
 //  main.m
-//  Chasing the Unicorn
+//  Chase the Unicorn
 //
 //  Created by Matthew Atkins on 23/01/2012.
 //  Copyright (c) 2012 Yoomee. All rights reserved.
