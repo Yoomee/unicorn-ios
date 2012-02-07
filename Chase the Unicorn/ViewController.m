@@ -217,7 +217,7 @@
         if (buttonHidden){
             [messageTextView setFrame:CGRectMake(messageTextView.frame.origin.x, messageTextView.frame.origin.y, messageTextView.frame.size.width, 209.0f)];
         } else {
-            [messageTextView setFrame:CGRectMake(messageTextView.frame.origin.x, messageTextView.frame.origin.y, messageTextView.frame.size.width, 168.0f)];
+            [messageTextView setFrame:CGRectMake(messageTextView.frame.origin.x, messageTextView.frame.origin.y, messageTextView.frame.size.width, 163.0f)];
         }
         [self.messageButton setTag:messageID];
         [self.bgImageView setImage:[UIImage imageNamed:@"ViewControllerBGMessage.png"]];

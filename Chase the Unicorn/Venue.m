@@ -37,7 +37,7 @@
 }
 
 -(NSString *) latLngString{    
-        return [NSString stringWithFormat:@"%f,%f(%@)",lat,lng,self.escapedName];
+        return [NSString stringWithFormat:@"%f,%f",lat,lng];
 }
 
 -(NSURL *) foursquareURL{    

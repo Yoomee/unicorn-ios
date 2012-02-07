@@ -71,14 +71,14 @@
             [mapView removeAnnotations:existingPoints];
         
         CLLocationCoordinate2D venueCoord;
-        
         venueCoord.latitude = self.venue.lat;
         venueCoord.longitude = self.venue.lng;
-        
-        MKCoordinateRegion region =
-        MKCoordinateRegionMakeWithDistance (
-                                            venueCoord, 500, 500);
+        MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(venueCoord, 500, 500);
         [mapView setRegion:region animated:NO];
+        
+        //Toggle user location to make it show.
+        [mapView setShowsUserLocation:NO];
+        [mapView setShowsUserLocation:YES];
         
         MKPointAnnotation *mapMarker = [[MKPointAnnotation alloc] init];
         mapMarker.coordinate = venueCoord;

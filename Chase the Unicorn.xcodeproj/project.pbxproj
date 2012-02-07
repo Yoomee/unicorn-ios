@@ -210,7 +210,7 @@
 				5BAF7D0214CD8C75006D4638 /* Supporting Files */,
 			);
 			name = "Chase the Unicorn";
-			path = "Chasing the Unicorn";
+			path = "Chase the Unicorn";
 			sourceTree = "<group>";
 		};
 		5BAF7D0214CD8C75006D4638 /* Supporting Files */ = {
@@ -278,7 +278,7 @@
 			dependencies = (
 			);
 			name = "Chase the Unicorn";
-			productName = "Chasing the Unicorn";
+			productName = "Chase the Unicorn";
 			productReference = 5BAF7CF714CD8C75006D4638 /* Chase the Unicorn.app */;
 			productType = "com.apple.product-type.application";
 		};
@@ -438,8 +438,8 @@
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Chasing the Unicorn/Chase the Unicorn-Prefix.pch";
-				INFOPLIST_FILE = "Chasing the Unicorn/Chase the Unicorn-Info.plist";
+				GCC_PREFIX_HEADER = "Chase the Unicorn/Chase the Unicorn-Prefix.pch";
+				INFOPLIST_FILE = "Chase the Unicorn/Chase the Unicorn-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "Chase the Unicorn";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
@@ -452,8 +452,8 @@
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Yoomee";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Chasing the Unicorn/Chase the Unicorn-Prefix.pch";
-				INFOPLIST_FILE = "Chasing the Unicorn/Chase the Unicorn-Info.plist";
+				GCC_PREFIX_HEADER = "Chase the Unicorn/Chase the Unicorn-Prefix.pch";
+				INFOPLIST_FILE = "Chase the Unicorn/Chase the Unicorn-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "Chase the Unicorn";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "8461D38E-5335-455E-9AC0-14341658AD22";
