@@ -20,6 +20,7 @@
 		5B3FCEC014DC3FCE00BC3E01 /* AboutViewBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B3FCEBF14DC3FCE00BC3E01 /* AboutViewBG.png */; };
 		5B516E1914E135AC00E44BFE /* MessageButtonBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B516E1714E135AC00E44BFE /* MessageButtonBG.png */; };
 		5B516E1A14E135AC00E44BFE /* MessageButtonBG@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B516E1814E135AC00E44BFE /* MessageButtonBG@2x.png */; };
+		5B6D334E14E1878C000E1B72 /* AboutViewBG@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B6D334D14E1878C000E1B72 /* AboutViewBG@2x.png */; };
 		5BA7BE8314DFFF44000F29C5 /* VenueViewControllerBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BA7BE8114DFFF44000F29C5 /* VenueViewControllerBG.png */; };
 		5BA7BE8414DFFF44000F29C5 /* VenueViewControllerBG@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BA7BE8214DFFF44000F29C5 /* VenueViewControllerBG@2x.png */; };
 		5BA7BE8714E008AA000F29C5 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BA7BE8614E008AA000F29C5 /* MapKit.framework */; };
@@ -70,6 +71,7 @@
 		5B3FCEBF14DC3FCE00BC3E01 /* AboutViewBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AboutViewBG.png; sourceTree = "<group>"; };
 		5B516E1714E135AC00E44BFE /* MessageButtonBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MessageButtonBG.png; sourceTree = "<group>"; };
 		5B516E1814E135AC00E44BFE /* MessageButtonBG@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MessageButtonBG@2x.png"; sourceTree = "<group>"; };
+		5B6D334D14E1878C000E1B72 /* AboutViewBG@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AboutViewBG@2x.png"; sourceTree = "<group>"; };
 		5BA7BE8114DFFF44000F29C5 /* VenueViewControllerBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = VenueViewControllerBG.png; sourceTree = "<group>"; };
 		5BA7BE8214DFFF44000F29C5 /* VenueViewControllerBG@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "VenueViewControllerBG@2x.png"; sourceTree = "<group>"; };
 		5BA7BE8614E008AA000F29C5 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -237,6 +239,7 @@
 				5B516E1714E135AC00E44BFE /* MessageButtonBG.png */,
 				5B516E1814E135AC00E44BFE /* MessageButtonBG@2x.png */,
 				5B3FCEBF14DC3FCE00BC3E01 /* AboutViewBG.png */,
+				5B6D334D14E1878C000E1B72 /* AboutViewBG@2x.png */,
 				5B3FCEB214DC0A6E00BC3E01 /* OtherVenueButtonBG.png */,
 				5B3FCEB514DC0BCB00BC3E01 /* OtherVenueButtonBGHighlight.png */,
 				5B33474714DAB46900A3FCE1 /* app_icon_57.png */,
@@ -344,6 +347,7 @@
 				5BA7BEB814E04972000F29C5 /* Loading4.png in Resources */,
 				5B516E1914E135AC00E44BFE /* MessageButtonBG.png in Resources */,
 				5B516E1A14E135AC00E44BFE /* MessageButtonBG@2x.png in Resources */,
+				5B6D334E14E1878C000E1B72 /* AboutViewBG@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
