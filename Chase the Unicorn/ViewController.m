@@ -101,6 +101,7 @@
                 NSError *jsonParsingError = nil;
                 NSDictionary *resDict = [NSJSONSerialization JSONObjectWithData:resData options:0 error:&jsonParsingError];
                 NSDictionary *messageDict = [resDict objectForKey:@"message"];
+                NSLog(@"%@",resDict);
                 if (messageDict != nil && (NSNull *)messageDict != [NSNull null]){
                     [self showMessage:[messageDict objectForKey:@"text"] withID:[[messageDict objectForKey:@"id"] integerValue] buttonText:[messageDict objectForKey:@"button_text"] buttonHidden:[[messageDict objectForKey:@"button_hidden"] boolValue]];
                 } else{
@@ -130,6 +131,14 @@
     });   
 }
 
+-(void)addSound:(NSString *)fileName{
+    NSString *path = [NSString stringWithFormat:@"%@/%@", [[NSBundle mainBundle] resourcePath],fileName];
+    SystemSoundID soundID;
+    NSURL *filePath = [NSURL fileURLWithPath:path isDirectory:NO];
+    AudioServicesCreateSystemSoundID((__bridge CFURLRef)filePath, &soundID);
+    [soundFileObjects addObject:[NSNumber numberWithUnsignedLong:soundID]];
+}
+
 
 
 #pragma mark - View lifecycle
@@ -143,28 +152,30 @@
     
     soundFileObjects = [[NSMutableArray alloc] init];
     
-    for (int i=0; i<8; i++) {
-        NSString *path = [NSString stringWithFormat:@"%@/horse0%i.wav", [[NSBundle mainBundle] resourcePath],i];
-        SystemSoundID soundID;
-        NSURL *filePath = [NSURL fileURLWithPath:path isDirectory:NO];
-        AudioServicesCreateSystemSoundID((__bridge CFURLRef)filePath, &soundID);
-        [soundFileObjects addObject:[NSNumber numberWithUnsignedLong:soundID]];
-    }
+    for (int i=0; i<=14; i++){[self addSound:[NSString stringWithFormat:@"general%i.mp3",i]];}
+    for (int i=0; i<=5; i++) {[self addSound:[NSString stringWithFormat:@"nose%i.mp3",i]];}
+    for (int i=0; i<=5; i++) {[self addSound:[NSString stringWithFormat:@"horn%i.mp3",i]];}
+    [self addSound:@"eye0.mp3"];
 }
 
--(IBAction)didPressUnicorn{
-    int x = (arc4random() % 6) + 1;
+-(IBAction)didPressUnicorn:(id)sender {
+    int x = (arc4random() % 15);
     SystemSoundID soundID = [[soundFileObjects objectAtIndex:x] unsignedLongValue];
 	AudioServicesPlaySystemSound(soundID);
 }
-
--(IBAction)didPressUnicornHorn{
-    SystemSoundID soundID = [[soundFileObjects objectAtIndex:0] unsignedLongValue];
+-(IBAction)didPressUnicornNose:(id)sender {
+    int x = (arc4random() % 6) + 15;
+    SystemSoundID soundID = [[soundFileObjects objectAtIndex:x] unsignedLongValue];
 	AudioServicesPlaySystemSound(soundID);
 }
--(IBAction)didPressUnicornNose{
-    SystemSoundID soundID = [[soundFileObjects objectAtIndex:7] unsignedLongValue];
+-(IBAction)didPressUnicornHorn:(id)sender {
+    int x = (arc4random() % 6) + 21;
+    SystemSoundID soundID = [[soundFileObjects objectAtIndex:x] unsignedLongValue];
 	AudioServicesPlaySystemSound(soundID);
+}
+- (IBAction)didPressUnicornEye:(id)sender {
+    SystemSoundID soundID = [[soundFileObjects objectAtIndex:27] unsignedLongValue];
+    AudioServicesPlaySystemSound(soundID);
 }
 
 - (void)viewDidUnload

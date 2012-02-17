@@ -28,6 +28,11 @@
 @property (unsafe_unretained, nonatomic) IBOutlet UITextView *messageTextView;
 @property (unsafe_unretained, nonatomic) IBOutlet UIButton *messageButton;
 
+- (IBAction)didPressUnicorn:(id)sender;
+- (IBAction)didPressUnicornNose:(id)sender;
+- (IBAction)didPressUnicornHorn:(id)sender;
+- (IBAction)didPressUnicornEye:(id)sender;
+
 @property (nonatomic, strong) NSMutableArray *venues;
 @property (nonatomic, strong) NSMutableArray *soundFileObjects;
 @property (nonatomic, strong) MyCLController *locationController;
