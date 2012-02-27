@@ -6,6 +6,7 @@
 //  Copyright (c) 2012 Yoomee. All rights reserved.
 //
 
+#import "AppDelegate.h"
 #import "ViewController.h"
 #import "AboutViewController.h"
 #import "SplashScreenController.h"
@@ -88,20 +89,18 @@
     NSURL *venuesURL = [NSURL URLWithString:urlString];
     UIApplication* app = [UIApplication sharedApplication];
     app.networkActivityIndicatorVisible = YES;
-    [self disableView:NO];
-    [self.searchingText setHidden:NO];
-    [self.refreshButton setHidden:YES];
     [self.activityIndicator setHidden:NO];
     [self.activityIndicator startAnimating];
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
         NSData *resData = [NSData dataWithContentsOfURL:venuesURL];
         app.networkActivityIndicatorVisible = NO;
         dispatch_async(dispatch_get_main_queue(), ^{
+            AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+            [appDelegate hideSplashScreen];
             if (resData != nil){
                 NSError *jsonParsingError = nil;
                 NSDictionary *resDict = [NSJSONSerialization JSONObjectWithData:resData options:0 error:&jsonParsingError];
                 NSDictionary *messageDict = [resDict objectForKey:@"message"];
-                NSLog(@"%@",resDict);
                 if (messageDict != nil && (NSNull *)messageDict != [NSNull null]){
                     [self showMessage:[messageDict objectForKey:@"text"] withID:[[messageDict objectForKey:@"id"] integerValue] buttonText:[messageDict objectForKey:@"button_text"] buttonHidden:[[messageDict objectForKey:@"button_hidden"] boolValue]];
                 } else{
@@ -199,7 +198,6 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    [self fetchVenues];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -244,9 +242,11 @@
 }
 
 -(void) showMessage:(NSString *)message withID:(NSInteger)messageID buttonText:(NSString *) buttonText buttonHidden:(BOOL)buttonHidden{
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    NSInteger lastViewedMessageID = [defaults integerForKey:@"messageID"];
-    if (messageID > lastViewedMessageID){
+    //NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    //NSInteger lastViewedMessageID = [defaults integerForKey:@"messageID"];
+    //if (messageID > lastViewedMessageID){
+    //Always show messages, let server decide
+    if(YES){
         [self.messageTextView setText:message];
         if (buttonText == (id)[NSNull null] || buttonText.length == 0 ) buttonText = @"OK";
         [self.messageButton setTitle:buttonText forState:UIControlStateNormal];
@@ -265,6 +265,9 @@
 }
 
 - (IBAction)refreshVenues:(id)sender {
+    [self disableView:NO];
+    [self.searchingText setHidden:NO];
+    [self.refreshButton setHidden:YES];
     [self fetchVenues];
 }
 

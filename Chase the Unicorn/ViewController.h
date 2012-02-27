@@ -39,6 +39,7 @@
 @property (strong, nonatomic) VenueViewController *venueViewController;
 
 -(void)showMessage:(NSString *)message withID:(NSInteger)messageID buttonText:(NSString *)buttonText buttonHidden:(BOOL)buttonHidden;
+-(void)fetchVenues;
 
 - (IBAction)showAbout:(id)sender;
 - (IBAction)showVenue:(id)sender;

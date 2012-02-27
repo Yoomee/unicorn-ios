@@ -10,5 +10,9 @@
 
 @interface SplashScreenController : UIViewController
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (nonatomic, strong) NSArray *phrases;
+@property (weak, nonatomic) IBOutlet UITextView *phraseLabel;
+
+-(void)changePhrase;
 
 @end

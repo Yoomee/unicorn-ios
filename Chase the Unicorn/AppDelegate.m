@@ -30,14 +30,15 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [self setUUID];
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
     self.viewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
     self.splashScreenController = [[SplashScreenController alloc] initWithNibName:@"SplashScreenController" bundle:nil];
     self.window.rootViewController = self.splashScreenController;    
     [self.window makeKeyAndVisible];
-    [self performSelector:@selector(hideSplashScreen) withObject:nil afterDelay: 2.5f];
-    [self setUUID];
+    
+    [self.viewController performSelector:@selector(fetchVenues) withObject:nil afterDelay: 2.0f];
     return YES;
 }
 
@@ -69,7 +70,9 @@
     /*
      Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
      */
-    [self.window.rootViewController viewWillAppear:YES];
+    if(self.window.rootViewController == self.viewController){
+        [self.viewController refreshVenues:nil];
+    }
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application
@@ -83,7 +86,8 @@
 
 - (void)hideSplashScreen
 {
-    self.window.rootViewController = self.viewController;
+    if(self.window.rootViewController != self.viewController)
+        self.window.rootViewController = self.viewController;
 }
 
 @end

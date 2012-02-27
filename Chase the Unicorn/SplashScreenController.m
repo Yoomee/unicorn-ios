@@ -10,6 +10,8 @@
 
 @implementation SplashScreenController
 @synthesize imageView;
+@synthesize phrases;
+@synthesize phraseLabel;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -28,6 +30,15 @@
     // Release any cached data, images, etc that aren't in use.
 }
 
+- (void) changePhrase{
+    NSInteger nextPhraseIndex = (self.phraseLabel.tag + 1) % [self.phrases count];
+    [self.phraseLabel setText:[self.phrases objectAtIndex:nextPhraseIndex]];
+    [self.phraseLabel setTag:nextPhraseIndex];
+    if (self.isViewLoaded && self.view.window)
+        [self performSelector:@selector(changePhrase) withObject:nil afterDelay:3.0f];
+    
+}
+
 #pragma mark - View lifecycle
 
 - (void)viewDidLoad
@@ -44,11 +55,28 @@
 	imageView.animationDuration = 0.8;
     imageView.contentMode = UIViewContentModeBottom;
 	[imageView startAnimating];
+    
+    NSArray *myPhrases = [[NSArray alloc] initWithObjects:
+                          @"Locating the unicorn...",
+                          @"Awaking unicorn from slumber...",
+                          @"Gathering magical fairies...",
+                          @"Repelling evil trolls...",
+                          @"A double rainbow! Whoa! What does it mean?",
+                          @"You should never play leapfrog with a unicorn.",
+                          @"Weather forecast for tonight: dark.",
+                          @"Will the unicorn be willing to serve thee?",
+                          @"My hovercraft is full of eels.",
+                          @"I said no to drugs, but they didn’t listen.",
+                          @"I intend to live forever. So far, so good.",
+                          nil];
+    self.phrases = myPhrases;
+    [self performSelector:@selector(changePhrase) withObject:nil afterDelay:3.0f];
 }
 
 - (void)viewDidUnload
 {
     [self setImageView:nil];
+    [self setPhraseLabel:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
